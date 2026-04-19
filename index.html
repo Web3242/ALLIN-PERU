@@ -159,10 +159,10 @@
 <body>
 
     <!-- NAVEGACIÓN -->
-    <nav class="fixed w-full z-40 px-6 md:px-12 py-6 md:py-8 bg-[var(--nav-bg)]/90 backdrop-blur-md border-b border-black/5 text-black">
+    <nav id="top-nav" class="fixed w-full z-40 px-6 md:px-12 py-6 md:py-8 bg-[var(--nav-bg)]/90 backdrop-blur-md border-b border-black/5 text-black">
         <div class="container-custom flex justify-between items-center text-black">
             <div class="font-logo text-2xl md:text-3xl cursor-pointer" onclick="window.scrollTo(0,0)">
-                <span>ALL</span><span class="text-[var(--logo-morado)]">IN</span>
+                <span>ALL</span><span id="nav-logo-in" class="text-[var(--accent)] transition-colors duration-300">IN</span>
             </div>
             <div class="hidden md:flex space-x-12 text-[10px] uppercase font-bold tracking-[0.4em]">
                 <a href="#shop" class="hover:text-[var(--pitaya)] transition-colors text-black">Menú</a>
@@ -264,7 +264,7 @@
             <div class="category-row">
                 <div class="row-glow glow-smoothies"></div>
                 <div class="container-custom">
-                    <h2 class="font-serif text-5xl md:text-6xl font-black italic tracking-tighter mb-12 border-b border-black/5 pb-8 text-black text-black text-black">Smoothies</h2>
+                    <h2 class="font-serif text-5xl md:text-6xl font-black italic tracking-tighter mb-12 border-b border-black/5 pb-8 text-black text-black">Smoothies</h2>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-black">
                         <div class="product-card group" onclick="openCustomizer('Power Banana', 'smoothie', 25, 'SMOOTHIE-BANANA.png')">
                             <div class="aspect-[3/4] relative"><img src="SMOOTHIE-BANANA.png"><div class="personalizar-overlay"><span class="personalizar-tag">Personalizar</span></div></div>
@@ -276,10 +276,10 @@
                         </div>
                         <div class="product-card group" onclick="openCustomizer('Solar Glow', 'smoothie', 25, 'SMOOTHIE-NARANJA.png')">
                             <div class="aspect-[3/4] relative"><img src="SMOOTHIE-NARANJA.png"><div class="personalizar-overlay"><span class="personalizar-tag">Personalizar</span></div></div>
-                            <div class="p-8 text-black"><span class="text-[9px] font-black uppercase text-[var(--accent)] block mb-1 text-black">HIDRATACIÓN</span><h3 class="font-serif text-2xl text-black">Solar Glow</h3><span class="font-bold italic text-lg text-black">S/ 25</span></div>
+                            <div class="p-8 text-black"><span class="text-[9px] font-black uppercase text-[var(--accent)] block mb-1">HIDRATACIÓN</span><h3 class="font-serif text-2xl text-black">Solar Glow</h3><span class="font-bold italic text-lg text-black">S/ 25</span></div>
                         </div>
                         <div class="product-card group text-black" onclick="openCustomizer('Zen Blue', 'smoothie', 25, 'SMOOTHIE-AZUL.png')">
-                            <div class="aspect-[3/4] relative"><img src="SMOOTHIE-AZUL.png"><div class="personalizar-overlay"><span class="personalizar-tag text-black">Personalizar</span></div></div>
+                            <div class="aspect-[3/4] relative"><img src="SMOOTHIE-AZUL.png"><div class="personalizar-overlay"><span class="personalizar-tag">Personalizar</span></div></div>
                             <div class="p-8 text-black"><span class="text-[9px] font-black uppercase text-[var(--accent)] block mb-1">DOPAMINA</span><h3 class="font-serif text-2xl text-black">Zen Blue</h3><span class="font-bold italic text-lg">S/ 25</span></div>
                         </div>
                     </div>
@@ -290,7 +290,7 @@
             <div class="category-row">
                 <div class="row-glow glow-sandwiches"></div>
                 <div class="container-custom">
-                    <h2 class="font-serif text-5xl md:text-6xl font-black italic tracking-tighter mb-12 border-b border-black/5 pb-8 text-black text-black text-black">Sandwiches</h2>
+                    <h2 class="font-serif text-5xl md:text-6xl font-black italic tracking-tighter mb-12 border-b border-black/5 pb-8 text-black">Sandwiches</h2>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                         <div class="product-card group" onclick="openCustomizer('Sandwich Full Fibra', 'sandwich', 22, 'PAN-FIBRA.png')">
                             <div class="aspect-square relative"><img src="PAN-FIBRA.png"><div class="personalizar-overlay"><span class="personalizar-tag">Personalizar</span></div></div>
@@ -346,15 +346,15 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div class="product-card group" onclick="openCustomizer('Helado de Tuna', 'helado', 15, 'HELADO-TUNA.png')">
                             <div class="aspect-square relative text-black"><img src="HELADO-TUNA.png"><div class="personalizar-overlay"><span class="personalizar-tag text-black">Personalizar</span></div></div>
-                            <div class="p-8 flex justify-between items-center text-black text-black text-black"><h3 class="font-serif text-2xl text-black">Helado de Tuna</h3><span class="font-bold italic text-lg text-black">S/ 15</span></div>
+                            <div class="p-8 flex justify-between items-center text-black"><h3 class="font-serif text-2xl text-black">Helado de Tuna</h3><span class="font-bold italic text-lg text-black">S/ 15</span></div>
                         </div>
                         <div class="product-card group" onclick="openCustomizer('Helado de Açaí', 'helado', 15, 'HELADO-DE-ACAI.png')">
                             <div class="aspect-square relative text-black"><img src="HELADO-DE-ACAI.png"><div class="personalizar-overlay"><span class="personalizar-tag text-black">Personalizar</span></div></div>
-                            <div class="p-8 flex justify-between items-center text-black text-black text-black"><h3 class="font-serif text-2xl text-black">Helado de Açaí</h3><span class="font-bold italic text-lg text-black">S/ 15</span></div>
+                            <div class="p-8 flex justify-between items-center text-black"><h3 class="font-serif text-2xl text-black">Helado de Açaí</h3><span class="font-bold italic text-lg text-black">S/ 15</span></div>
                         </div>
                         <div class="product-card group" onclick="openCustomizer('Helado de Camu Camu', 'helado', 15, 'HELADO-CAMU.png')">
                             <div class="aspect-square relative text-black"><img src="HELADO-CAMU.png"><div class="personalizar-overlay"><span class="personalizar-tag text-black">Personalizar</span></div></div>
-                            <div class="p-8 flex justify-between items-center text-black text-black text-black"><h3 class="font-serif text-2xl whitespace-nowrap text-black text-black text-black">Helado de Camu Camu</h3><span class="font-bold italic text-lg text-black">S/ 15</span></div>
+                            <div class="p-8 flex justify-between items-center text-black whitespace-nowrap"><h3 class="font-serif text-2xl text-black">Helado de Camu Camu</h3><span class="font-bold italic text-lg text-black">S/ 15</span></div>
                         </div>
                     </div>
                 </div>
@@ -362,57 +362,57 @@
 
             <!-- Parfait -->
             <div class="category-row text-black">
-                <div class="row-glow glow-parfait text-black text-black text-black"></div>
+                <div class="row-glow glow-parfait text-black"></div>
                 <div class="container-custom">
-                    <h2 class="font-serif text-5xl md:text-6xl font-black italic tracking-tighter mb-12 border-b border-black/5 pb-8 text-black text-black text-black text-black">Parfait de Yogurt</h2>
+                    <h2 class="font-serif text-5xl md:text-6xl font-black italic tracking-tighter mb-12 border-b border-black/5 pb-8 text-black">Parfait de Yogurt</h2>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-black">
                         <div class="product-card group" onclick="openCustomizer('Parfait de Frutas Personalizable', 'parfait', 18, 'PARFAIT-FRUTAS.png')">
                             <div class="aspect-[3/4] relative text-black"><img src="PARFAIT-FRUTAS.png"><div class="personalizar-overlay"><span class="personalizar-tag text-black">Personalizar</span></div></div>
-                            <div class="p-8 text-black text-black text-black text-black text-black"><h3 class="font-serif text-2xl text-black">Parfait Frutas</h3><span class="font-bold italic text-lg text-black">S/ 18</span></div>
+                            <div class="p-8 text-black"><h3 class="font-serif text-2xl text-black">Parfait Frutas</h3><span class="font-bold italic text-lg text-black">S/ 18</span></div>
                         </div>
                         <div class="product-card group text-black" onclick="openCustomizer('Parfait de Arándano', 'parfait', 16, 'PARFAIT-ARANDANO.png')">
                             <div class="aspect-[3/4] relative text-black"><img src="PARFAIT-ARANDANO.png"><div class="personalizar-overlay"><span class="personalizar-tag text-black">Personalizar</span></div></div>
-                            <div class="p-8 text-black text-black text-black text-black text-black"><h3 class="font-serif text-2xl text-black">Parfait Arándano</h3><span class="font-bold italic text-lg text-black">S/ 16</span></div>
+                            <div class="p-8 text-black"><h3 class="font-serif text-2xl text-black">Parfait Arándano</h3><span class="font-bold italic text-lg text-black">S/ 16</span></div>
                         </div>
                         <div class="product-card group text-black" onclick="openCustomizer('Parfait de Banana', 'parfait', 16, 'PARFAIT-BANANA.png')">
-                            <div class="aspect-[3/4] relative text-black text-black"><img src="PARFAIT-BANANA.png"><div class="personalizar-overlay"><span class="personalizar-tag text-black">Personalizar</span></div></div>
-                            <div class="p-8 text-black text-black text-black text-black text-black"><h3 class="font-serif text-2xl text-black">Parfait Banana</h3><span class="font-bold italic text-lg text-black">S/ 16</span></div>
+                            <div class="aspect-[3/4] relative text-black"><img src="PARFAIT-BANANA.png"><div class="personalizar-overlay"><span class="personalizar-tag text-black">Personalizar</span></div></div>
+                            <div class="p-8 text-black"><h3 class="font-serif text-2xl text-black">Parfait Banana</h3><span class="font-bold italic text-lg text-black">S/ 16</span></div>
                         </div>
                         <div class="product-card group text-black" onclick="openCustomizer('Parfait de Fresa', 'parfait', 16, 'PARFAIT-FRESA.png')">
-                            <div class="aspect-[3/4] relative text-black text-black"><img src="PARFAIT-FRESA.png"><div class="personalizar-overlay"><span class="personalizar-tag text-black">Personalizar</span></div></div>
-                            <div class="p-8 text-black text-black text-black text-black text-black text-black text-black"><h3 class="font-serif text-2xl text-black text-black">Parfait de Fresa</h3><span class="font-bold italic text-lg text-black">S/ 16</span></div>
+                            <div class="aspect-[3/4] relative text-black"><img src="PARFAIT-FRESA.png"><div class="personalizar-overlay"><span class="personalizar-tag text-black">Personalizar</span></div></div>
+                            <div class="p-8 text-black"><h3 class="font-serif text-2xl text-black">Parfait de Fresa</h3><span class="font-bold italic text-lg text-black">S/ 16</span></div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Postres -->
-            <div class="category-row text-black text-black text-black">
+            <div class="category-row text-black">
                 <div class="row-glow glow-postres"></div>
                 <div class="container-custom">
-                    <h2 class="font-serif text-5xl md:text-6xl font-black italic tracking-tighter mb-12 border-b border-black/5 pb-8 text-black text-black text-black text-black text-black">Postres</h2>
+                    <h2 class="font-serif text-5xl md:text-6xl font-black italic tracking-tighter mb-12 border-b border-black/5 pb-8 text-black">Postres</h2>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                         <div class="product-card group" onclick="openCustomizer('Galleta Berry Cacao 70%', 'postres', 8, 'GALLETA-ARANDANOS-Y-CACAO.png')">
                             <div class="aspect-square relative"><img src="GALLETA-ARANDANOS-Y-CACAO.png"><div class="personalizar-overlay"><span class="personalizar-tag">Personalizar</span></div></div>
-                            <div class="p-8 text-black text-black text-black"><h3 class="font-serif text-2xl text-black text-black">Berry Cacao 70%</h3><span class="font-bold italic text-lg text-black">S/ 8</span></div>
+                            <div class="p-8 text-black"><h3 class="font-serif text-2xl text-black">Berry Cacao 70%</h3><span class="font-bold italic text-lg text-black">S/ 8</span></div>
                         </div>
                         <div class="product-card group" onclick="openCustomizer('Bombón Yogurt', 'postres', 6, 'BOMBOM-DE-CHOCOLATE.png')">
                             <div class="aspect-square relative text-black"><img src="BOMBOM-DE-CHOCOLATE.png"><div class="personalizar-overlay"><span class="personalizar-tag text-black">Personalizar</span></div></div>
-                            <div class="p-8 text-black text-black text-black text-black text-black text-black text-black"><h3 class="font-serif text-2xl text-black">Bombón Yogurt</h3><span class="font-bold italic text-lg text-black">S/ 6</span></div>
+                            <div class="p-8 text-black"><h3 class="font-serif text-2xl text-black">Bombón Yogurt</h3><span class="font-bold italic text-lg text-black">S/ 6</span></div>
                         </div>
                         <div class="product-card group" onclick="openCustomizer('Waffle Avena Orgánica', 'postres', 27, 'WAFFLE.png')">
-                            <div class="aspect-square relative text-black text-black text-black text-black text-black text-black text-black"><img src="WAFFLE.png"><div class="personalizar-overlay"><span class="personalizar-tag text-black text-black text-black text-black text-black">Personalizar</span></div></div>
-                            <div class="p-8 text-black text-black text-black text-black"><h3 class="font-serif text-2xl text-black text-black text-black">Waffle Orgánico</h3><span class="font-bold italic text-lg text-[var(--accent)]">S/ 27</span></div>
+                            <div class="aspect-square relative text-black"><img src="WAFFLE.png"><div class="personalizar-overlay"><span class="personalizar-tag text-black">Personalizar</span></div></div>
+                            <div class="p-8 text-black"><h3 class="font-serif text-2xl text-black">Waffle Orgánico</h3><span class="font-bold italic text-lg text-[var(--accent)]">S/ 27</span></div>
                         </div>
                         <div class="product-card group text-black" onclick="openCustomizer('Enrollado Pistacho', 'postres', 15, 'ENRROLADO-PISTACHO.png')">
                             <div class="aspect-square relative text-black"><img src="ENRROLADO-PISTACHO.png"><div class="personalizar-overlay"><span class="personalizar-tag text-black">Personalizar</span></div></div>
-                            <div class="p-8 text-black text-black text-black text-black text-black text-black text-black text-black text-black"><h3 class="font-serif text-2xl text-black">Enrollado Pistacho</h3><span class="font-bold italic text-lg text-[var(--accent)] text-black">S/ 15</span></div>
+                            <div class="p-8 text-black"><h3 class="font-serif text-2xl text-black">Enrollado Pistacho</h3><span class="font-bold italic text-lg text-[var(--accent)] text-black">S/ 15</span></div>
                         </div>
                         <div class="product-card group text-black" onclick="openCustomizer('Enrollado Almendra', 'postres', 15, 'ENROLLADO-ALMENDRA.png')">
-                            <div class="aspect-square relative text-black"><img src="ENROLLADO-ALMENDRA.png"><div class="personalizar-overlay"><span class="personalizar-tag text-black text-black">Personalizar</span></div></div>
-                            <div class="p-8 text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black">
-                                <h3 class="font-serif text-2xl text-black text-black">Enrollado Almendra</h3>
-                                <span class="font-bold italic text-lg text-[var(--accent)] text-black">S/ 15</span>
+                            <div class="aspect-square relative text-black"><img src="ENROLLADO-ALMENDRA.png"><div class="personalizar-overlay"><span class="personalizar-tag text-black">Personalizar</span></div></div>
+                            <div class="p-8 text-black">
+                                <h3 class="font-serif text-2xl text-black">Enrollado Almendra</h3>
+                                <span class="font-bold italic text-lg text-[var(--accent)]">S/ 15</span>
                             </div>
                         </div>
                     </div>
@@ -469,49 +469,49 @@
         </section>
 
         <!-- FOOTER -->
-        <footer id="about" class="py-16 bg-[var(--accent)] text-white relative text-white">
-            <div id="about-anchor" class="absolute -top-32 text-white text-white"></div>
+        <footer id="footer-main" class="py-16 bg-[var(--accent)] text-white relative">
+            <div id="about-anchor" class="absolute -top-32 text-white"></div>
             <div class="container-custom relative z-10 text-white">
-                <div class="grid lg:grid-cols-2 gap-12 items-stretch mb-16 text-white text-white text-white">
+                <div class="grid lg:grid-cols-2 gap-12 items-stretch mb-16">
                     <div class="h-full flex flex-col justify-start py-2">
-                        <h2 class="footer-habla font-serif text-[clamp(2.5rem,6vw,6.5rem)] font-black leading-[0.9] text-white uppercase text-white">LA <br> TIERRA <br> <span class="italic text-[var(--pitaya)] text-white text-white">HABLA</span></h2>
+                        <h2 class="footer-habla font-serif text-[clamp(2.5rem,6vw,6.5rem)] font-black leading-[0.9] text-white uppercase">LA <br> TIERRA <br> <span class="italic text-[var(--pitaya)]">HABLA</span></h2>
                         <!-- Contenedor de imagen ajustado con recorte a la derecha -->
                         <div class="mt-20 max-w-md overflow-hidden rounded-[2.5rem] shadow-2xl">
                             <img src="DELIVERY.png" alt="Delivery" class="w-[110%] max-w-none object-cover origin-left">
                         </div>
                     </div>
 
-                    <div class="space-y-12 text-white">
+                    <div class="space-y-12">
                         <div>
-                            <span class="text-[10px] font-bold uppercase text-[var(--pitaya)] block mb-3 opacity-95 tracking-[0.3em] text-white">Acerca de nosotros</span>
-                            <p class="text-sm md:text-base font-light leading-relaxed opacity-70 italic max-w-xl text-white mb-10 text-white text-white">Somos el vínculo entre la tierra peruana y tu estilo de vida cotidiano. Buscamos revalorizar nuestras frutas nativas a través de una nutrición sensorial profunda.</p>
+                            <span class="text-[10px] font-bold uppercase text-[var(--pitaya)] block mb-3 opacity-95 tracking-[0.3em]">Acerca de nosotros</span>
+                            <p class="text-sm md:text-base font-light leading-relaxed opacity-70 italic max-w-xl mb-10 text-white">Somos el vínculo entre la tierra peruana y tu estilo de vida cotidiano. Buscamos revalorizar nuestras frutas nativas a través de una nutrición sensorial profunda.</p>
                             
-                            <div class="space-y-4 pt-4 border-t border-white/10 text-white text-white">
-                                <span class="text-[10px] font-bold uppercase text-[var(--pitaya)] block mb-3 opacity-95 tracking-[0.3em] text-white">Nuestra Raíz: Consciencia que Florece</span>
-                                <p class="text-xs md:text-sm font-light leading-relaxed opacity-70 italic max-w-xl text-white text-white text-white">En Allin, honramos la riqueza del Perú trabajando con agricultores locales y respetando los ciclos naturales. Apostamos por prácticas sostenibles, empaques eco-amigables y un consumo responsable.</p>
-                                <p class="text-xs md:text-sm font-light leading-relaxed opacity-70 italic max-w-xl text-white text-white text-white">Súmate eligiendo lo natural y lo local.</p>
-                                <p class="text-xs md:text-sm font-bold italic text-white opacity-70 text-white text-white">Porque si la tierra está bien, nosotros también. 🌱</p>
+                            <div class="space-y-4 pt-4 border-t border-white/10">
+                                <span class="text-[10px] font-bold uppercase text-[var(--pitaya)] block mb-3 opacity-95 tracking-[0.3em]">Nuestra Raíz: Consciencia que Florece</span>
+                                <p class="text-xs md:text-sm font-light leading-relaxed opacity-70 italic max-w-xl text-white">En Allin, honramos la riqueza del Perú trabajando con agricultores locales y respetando los ciclos naturales. Apostamos por prácticas sostenibles, empaques eco-amigables y un consumo responsable.</p>
+                                <p class="text-xs md:text-sm font-light leading-relaxed opacity-70 italic max-w-xl text-white">Súmate eligiendo lo natural y lo local.</p>
+                                <p class="text-xs md:text-sm font-bold italic text-[var(--pitaya)] opacity-90">Porque si la tierra está bien, nosotros también. 🌱</p>
                             </div>
                         </div>
-                        <div id="contact-block" class="grid grid-cols-2 gap-10 pt-6 border-t border-white/5 text-white">
-                            <div><p class="text-[9px] font-bold uppercase text-[var(--pitaya)] mb-2 tracking-[0.2em] text-white text-white">Pidenos por</p><span class="font-rappi text-3xl md:text-5xl cursor-pointer hover:text-[var(--pitaya)] transition-colors text-white text-white text-white">Rappi</span></div>
-                            <div><p class="text-[9px] font-bold uppercase text-[var(--pitaya)] mb-2 tracking-[0.2em] text-white text-white">Contacto</p><a href="mailto:hola@allin.pe" class="font-serif text-xl md:text-2xl block hover:text-[var(--pitaya)] transition-colors text-white text-white text-white text-white text-white">hola@allin.pe</a><p class="font-bold text-lg md:text-xl tracking-wider mt-1 text-white text-white text-white">+51 987723610</p></div>
+                        <div id="contact-block" class="grid grid-cols-2 gap-10 pt-6 border-t border-white/5">
+                            <div><p class="text-[9px] font-bold uppercase text-[var(--pitaya)] mb-2 tracking-[0.2em]">Pidenos por</p><span class="font-rappi text-3xl md:text-5xl cursor-pointer hover:text-[var(--pitaya)] transition-colors">Rappi</span></div>
+                            <div><p class="text-[9px] font-bold uppercase text-[var(--pitaya)] mb-2 tracking-[0.2em]">Contacto</p><a href="mailto:hola@allin.pe" class="font-serif text-xl md:text-2xl block hover:text-[var(--pitaya)] transition-colors text-white">hola@allin.pe</a><p class="font-bold text-lg md:text-xl tracking-wider mt-1 text-white">+51 987723610</p></div>
                         </div>
                     </div>
                 </div>
                 
                 <div id="final-bar" class="pt-10 border-t border-white/10 grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center text-white">
                     <div class="flex flex-col items-center md:items-start gap-5">
-                        <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-[var(--pitaya)] opacity-90 text-[var(--pitaya)] text-white text-white">REDES SOCIALES</p>
-                        <div class="flex gap-5 items-center text-white">
-                            <a href="#" class="social-circle text-white text-white text-white"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path></svg></a>
-                            <a href="#" class="social-circle text-white text-white text-white text-white"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-1.13-.31-2.34-.25-3.41.33-.71.38-1.25 1.03-1.51 1.8-.29.81-.28 1.72.02 2.52.43 1.17 1.39 2.13 2.58 2.52 1.08.38 2.29.31 3.32-.21.84-.43 1.53-1.14 1.9-1.98.24-.55.35-1.14.36-1.74-.01-4.43-.01-8.85-.01-13.27z"/></svg></a>
+                        <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-[var(--pitaya)] opacity-95">REDES SOCIALES</p>
+                        <div class="flex gap-5 items-center">
+                            <a href="#" class="social-circle text-white"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path></svg></a>
+                            <a href="#" class="social-circle text-white"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-1.13-.31-2.34-.25-3.41.33-.71.38-1.25 1.03-1.51 1.8-.29.81-.28 1.72.02 2.52.43 1.17 1.39 2.13 2.58 2.52 1.08.38 2.29.31 3.32-.21.84-.43 1.53-1.14 1.9-1.98.24-.55.35-1.14.36-1.74-.01-4.43-.01-8.85-.01-13.27z"/></svg></a>
                         </div>
                     </div>
-                    <div class="flex flex-col items-center text-white text-white text-white text-white"><p class="text-[9px] uppercase text-white/50 tracking-[0.4em] italic leading-relaxed text-white">© 2026 ALLIN Perú — Life Style orgánico</p></div>
+                    <div class="flex flex-col items-center"><p class="text-[9px] uppercase text-white/50 tracking-[0.4em] italic leading-relaxed">© 2026 ALLIN Perú — Life Style orgánico</p></div>
                     <div class="flex flex-col items-center md:items-end gap-1">
-                        <p class="text-[10px] font-bold uppercase text-[var(--pitaya)] opacity-80 tracking-[0.2em] text-[var(--pitaya)] text-white text-white">DIRECCIÓN</p>
-                        <p class="font-serif text-base md:text-lg italic text-white text-white text-white">Av. La Encalada 1234, Surco</p>
+                        <p class="text-[10px] font-bold uppercase text-[var(--pitaya)] opacity-95 tracking-[0.2em]">DIRECCIÓN</p>
+                        <p class="font-serif text-base md:text-lg italic text-white">Av. La Encalada 1234, Surco</p>
                     </div>
                 </div>
             </div>
@@ -522,7 +522,7 @@
     <div id="checkout-page" class="bg-white text-black text-black">
         <div class="checkout-header border-b py-6 bg-white sticky top-0 z-10 text-black text-black text-black">
             <div class="container-custom flex justify-between items-center text-black text-black">
-                <div class="font-logo text-2xl text-black"><span>ALL</span><span class="text-[var(--logo-morado)] text-black">IN</span></div>
+                <div class="font-logo text-2xl text-black"><span>ALL</span><span class="text-[var(--accent)] text-black">IN</span></div>
                 <button onclick="backFromCheckout()" class="text-[10px] font-bold uppercase tracking-widest opacity-40 hover:opacity-100 text-black text-black text-black">Regresar</button>
             </div>
         </div>
@@ -547,7 +547,7 @@
                                 <input type="text" id="card-num" placeholder="Número tarjeta" class="checkout-input-v2 mb-4 bg-white text-black text-black text-black text-black" maxlength="19">
                                 <div class="grid grid-cols-2 gap-4 text-black text-black text-black text-black"><input type="text" id="card-exp" placeholder="MM/AA" class="checkout-input-v2 bg-white text-black text-black text-black text-black text-black" maxlength="5"><input type="password" id="card-cvv" placeholder="CVV" class="checkout-input-v2 bg-white text-black text-black text-black text-black text-black" maxlength="4"></div>
                             </div>
-                            <div class="payment-row" onclick="selectPayment('yape')"><div id="radio-yape" class="payment-radio text-black text-black text-black"></div><span class="font-bold text-xs uppercase text-black text-black text-black text-black text-black">Yape / Plin</span></div>
+                            <div class="payment-row" onclick="selectPayment('yape')"><div id="radio-yape" class="payment-radio text-black text-black text-black text-black text-black"></div><span class="font-bold text-xs uppercase text-black text-black text-black text-black text-black">Yape / Plin</span></div>
                             <div id="qr-panel" class="p-8 bg-gray-50 border-b hidden text-center text-black text-black text-black text-black text-black">
                                 <div class="w-32 h-32 bg-white mx-auto flex items-center justify-center border-2 border-black/5 rounded-xl shadow-sm text-black text-black text-black text-black text-black"><svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><path d="M7 7h.01M17 7h.01M7 17h.01M17 17h.01"></path></svg></div>
                                 <p class="text-[9px] mt-4 font-bold uppercase text-[var(--accent)] text-black text-black text-black text-black text-black">Titular: Allin Perú</p>
@@ -594,22 +594,22 @@
             <div id="toppings-container" class="flex flex-col text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black"></div>
         </div>
         <div class="pt-8 border-t border-black/5">
-            <div class="flex justify-between mb-4 px-1">
-                <span class="text-[10px] font-bold uppercase opacity-30 tracking-widest">Subtotal</span>
-                <span id="custom-total-price" class="font-serif text-2xl font-black italic">S/ 0.00</span>
+            <div class="flex justify-between mb-4 px-1 text-black">
+                <span class="text-[10px] font-bold uppercase opacity-30 tracking-widest text-black">Subtotal</span>
+                <span id="custom-total-price" class="font-serif text-2xl font-black italic text-black">S/ 0.00</span>
             </div>
-            <button onclick="confirmAddToCart()" class="w-full bg-[var(--accent)] text-white py-5 rounded-3xl font-bold uppercase shadow-xl tracking-widest">Añadir al Carrito</button>
+            <button onclick="confirmAddToCart()" class="w-full bg-[var(--accent)] text-white py-5 rounded-3xl font-bold uppercase shadow-xl tracking-widest text-black">Añadir al Carrito</button>
         </div>
     </div>
 
     <!-- CARRITO SIDE PANEL -->
     <div id="cart-panel" class="side-panel text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black">
         <div class="h-full flex flex-col text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black">
-            <div class="flex justify-between items-start mb-8 text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black"><h2 class="font-serif text-3xl italic tracking-tighter text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black">Carrito</h2><button onclick="closeAllPanels()" class="text-xl opacity-20 hover:opacity-100 text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black">✕</button></div>
-            <div id="cart-items-list" class="flex-grow flex flex-col overflow-y-auto text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black"></div>
-            <div id="cart-footer" class="pt-8 border-t border-black/5 hidden text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black">
-                <div class="flex justify-between mb-6 px-1 font-bold uppercase text-xs tracking-widest text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black"><span>Total</span><span id="cart-grand-total">S/ 0.00</span></div>
-                <button onclick="goToCheckout()" class="w-full bg-[var(--accent)] text-white py-5 rounded-3xl font-bold uppercase tracking-widest shadow-xl text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black">Continuar</button>
+            <div class="flex justify-between items-start mb-8 text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black"><h2 class="font-serif text-3xl italic tracking-tighter text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black">Carrito</h2><button onclick="closeAllPanels()" class="text-xl opacity-20 hover:opacity-100 text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black">✕</button></div>
+            <div id="cart-items-list" class="flex-grow flex flex-col overflow-y-auto text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black"></div>
+            <div id="cart-footer" class="pt-8 border-t border-black/5 hidden text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black">
+                <div class="flex justify-between mb-6 px-1 font-bold uppercase text-xs tracking-widest text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black"><span>Total</span><span id="cart-grand-total">S/ 0.00</span></div>
+                <button onclick="goToCheckout()" class="w-full bg-[var(--accent)] text-white py-5 rounded-3xl font-bold uppercase tracking-widest shadow-xl text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black">Continuar</button>
             </div>
         </div>
     </div>
@@ -647,14 +647,26 @@
                 { name: 'Cacao 70%', price: 2.50, section: 'Extras' },
                 { name: 'Mantequilla de maní', price: 2.00, section: 'Extras' }
             ],
-            sandwich: [{ name: 'Palta extra', price: 4 }, { name: 'Queso fresco', price: 3 }, { name: 'Queso bajo en grasa', price: 3 }]
+            parfait: [
+                { name: 'Granola', price: 2.50, section: 'Crunch' },
+                { name: 'Avena', price: 2.00, section: 'Crunch' },
+                { name: 'Pistachos', price: 3.00, section: 'Crunch' },
+                { name: 'Almendras', price: 2.50, section: 'Crunch' },
+                { name: 'Miel', price: 1.00, section: 'Dulzor natural' },
+                { name: 'Sirope de agave', price: 1.50, section: 'Dulzor natural' },
+                { name: 'Cacao 70%', price: 2.50, section: 'Premium' },
+                { name: 'Coco rallado', price: 1.50, section: 'Premium' },
+                { name: 'Semillas de chía', price: 1.00, section: 'Extras funcionales' },
+                { name: 'Semillas de linaza', price: 1.00, section: 'Extras funcionales' }
+            ],
+            sandwich: [{ name: 'Palta extra', price: 2.00 }, { name: 'Queso fresco', price: 3 }, { name: 'Queso bajo en grasa', price: 3 }]
         };
 
         const parfaitFruits = ["Fresa", "Plátano", "Arándano", "Kiwi", "Pitahaya", "Mango", "Piña", "Papaya", "Mandarina", "Naranja", "Uva", "Granadilla", "Tuna"];
 
         const smoothieBases = {
             'Power Banana': 'Plátano orgánico, piña, café espresso orgánico, cacao orgánico, mantequilla de cacahuete orgánica, monohidrato de creatina, proteína vegetal orgánica, sal rosa del Himalaya, agua.',
-            'Aloha': 'Fresa, plátano orgánico, papaya, glutamina, yogur de coco, linaza molida orgánica, frambuesa liofilizada, proteína vegetal orgánica, agua.',
+            'Aloha': 'Fresa, plátano orgánico, papaya, yogur de coco, linaza molida orgánica, frambuesa liofilizada, proteína vegetal orgánica, agua.',
             'Solar Glow': 'Limón orgánico, piña, mango, plátano orgánico, electrolitos, agua de coco orgánica, sal rosa del Himalaya, crema batida de coco casera orgánica.',
             'Zen Blue': 'Plátano orgánico, piña, proteína vegetal de vainilla, melena de león orgánica, espirulina azul orgánica, crema batida de coco orgánica, agua filtrada.'
         };
@@ -739,7 +751,7 @@
                 const s3 = '555 ml';
                 
                 container.innerHTML = `<p class="text-[10px] font-bold uppercase opacity-40 mb-6 tracking-widest text-black">Tamaño</p>
-                <div class="flex gap-2 text-black">
+                <div class="flex gap-2">
                     <div class="size-option selected text-black" onclick="selectSize('chico', 0, '${s1}', this)">
                         <div class="size-icon-container scale-s text-black">${cupSvg}</div>
                         <span class="size-name text-black">Chico</span>
@@ -769,7 +781,7 @@
             } else if (category === 'postres') {
                 container.innerHTML = `
                     <p class="sandwich-step-label">Nivel de Dulzor</p>
-                    <div class="flex gap-2 mb-6">
+                    <div class="flex gap-2 mb-6 text-black">
                         <div class="option-tile sweet-tile" onclick="toggleSandwichOption('sweetness', 'Bajo', this)"><span>Bajo</span></div>
                         <div class="option-tile sweet-tile selected" onclick="toggleSandwichOption('sweetness', 'Medio', this)"><span>Medio</span></div>
                         <div class="option-tile sweet-tile" onclick="toggleSandwichOption('sweetness', 'Alto', this)"><span>Alto</span></div>
@@ -797,11 +809,11 @@
                         <div class="option-tile bread-tile" onclick="toggleSandwichOption('bread', 'Pan sin gluten', this)"><span>Sin Gluten</span></div>
                     </div>
                     <p class="sandwich-step-label">Proteína <span class="text-[8px] opacity-60">${note}</span></p>
-                    <div class="grid grid-cols-2 gap-2 mb-4">
+                    <div class="grid grid-cols-2 gap-2 mb-4 text-black">
                         ${proteins.map(p => `<div class="option-tile" onclick="toggleSandwichOption('protein', '${p}', this)"><span>${p}</span></div>`).join('')}
                     </div>
                     <p class="sandwich-step-label">Vegetales</p>
-                    <div class="grid grid-cols-2 gap-2 mb-4">
+                    <div class="grid grid-cols-2 gap-2 mb-4 text-black">
                         <div class="option-tile" onclick="toggleSandwichOption('veg', 'Tomate', this)"><span>Tomate</span></div>
                         <div class="option-tile" onclick="toggleSandwichOption('veg', 'Espinaca', this)"><span>Espinaca</span></div>
                         <div class="option-tile" onclick="toggleSandwichOption('veg', 'Pepino', this)"><span>Pepino</span></div>
@@ -826,9 +838,13 @@
             if(!toppingOptions[category]) { title.style.display = 'none'; return; } 
             title.style.display = 'block';
             
-            if(category === 'helado' || (category === 'postres' && currentProductName.includes('Waffle'))) {
+            if(category === 'helado' || category === 'parfait' || (category === 'postres' && currentProductName.includes('Waffle'))) {
                 title.style.display = 'none'; 
-                let sections = (category === 'helado') ? ['Frutas', 'Crunch', 'Dulzor natural', 'Premium', 'Extras funcionales'] : ['Frutas frescas', 'Crunch', 'Dulzor', 'Extras'];
+                let sections = [];
+                if (category === 'helado') sections = ['Frutas', 'Crunch', 'Dulzor natural', 'Premium', 'Extras funcionales'];
+                else if (category === 'parfait') sections = ['Crunch', 'Dulzor natural', 'Premium', 'Extras funcionales'];
+                else sections = ['Frutas frescas', 'Crunch', 'Dulzor', 'Extras'];
+
                 const currentData = toppingOptions[category];
 
                 sections.forEach(secName => {
@@ -855,7 +871,7 @@
                         const sweetWrapper = document.createElement('div');
                         sweetWrapper.innerHTML = `
                             <p class="sandwich-step-label">Nivel de Dulzor</p>
-                            <div class="flex gap-2 mb-6 text-black">
+                            <div class="flex gap-2 mb-6">
                                 <div class="option-tile sweet-tile ${selectedSweetnessLevel === 'Bajo' ? 'selected' : ''}" onclick="toggleSandwichOption('sweetness', 'Bajo', this)"><span>Bajo</span></div>
                                 <div class="option-tile sweet-tile ${selectedSweetnessLevel === 'Medio' ? 'selected' : ''}" onclick="toggleSandwichOption('sweetness', 'Medio', this)"><span>Medio</span></div>
                                 <div class="option-tile sweet-tile ${selectedSweetnessLevel === 'Alto' ? 'selected' : ''}" onclick="toggleSandwichOption('sweetness', 'Alto', this)"><span>Alto</span></div>
@@ -889,7 +905,7 @@
                     if (secName === 'Dulzor') {
                         const sweetWrapper = document.createElement('div');
                         sweetWrapper.innerHTML = `
-                            <p class="sandwich-step-label text-black">Nivel de Dulzor</p>
+                            <p class="sandwich-step-label">Nivel de Dulzor</p>
                             <div class="flex gap-2 mb-6">
                                 <div class="option-tile sweet-tile ${selectedSweetnessLevel === 'Bajo' ? 'selected' : ''}" onclick="toggleSandwichOption('sweetness', 'Bajo', this)"><span>Bajo</span></div>
                                 <div class="option-tile sweet-tile ${selectedSweetnessLevel === 'Medio' ? 'selected' : ''}" onclick="toggleSandwichOption('sweetness', 'Medio', this)"><span>Medio</span></div>
@@ -910,12 +926,18 @@
                 const removedProteins = allPotentialProteins.filter(p => !currentSandwichProteins.includes(p));
 
                 let sandwichExtras = [...toppingOptions.sandwich];
-                removedProteins.forEach(p => { sandwichExtras.push({ name: p, price: 3.50 }); });
+                removedProteins.forEach(p => { 
+                    let pPrice = 3.50;
+                    if (p === 'Tofu') pPrice = 3.00;
+                    if (p === 'Atún') pPrice = 2.50;
+                    if (p === 'Palta') pPrice = 2.00;
+                    sandwichExtras.push({ name: p, price: pPrice }); 
+                });
 
                 sandwichExtras.forEach(top => { 
                     const div = document.createElement('div'); div.className = 'topping-item text-black'; 
                     div.onclick = () => { div.classList.toggle('selected'); if(selectedToppings.has(top.name)) selectedToppings.delete(top.name); else selectedToppings.add(top.name); updatePriceDisplay(); }; 
-                    div.innerHTML = `<div><span class="font-bold text-[11px] uppercase text-black">${top.name}</span></div><span class="font-bold text-[10px]">+ S/ ${top.price.toFixed(2)}</span>`; 
+                    div.innerHTML = `<div><span class="font-bold text-[11px] uppercase">${top.name}</span></div><span class="font-bold text-[10px]">+ S/ ${top.price.toFixed(2)}</span>`; 
                     container.appendChild(div); 
                 });
             } else {
@@ -939,7 +961,15 @@
             const removedProteins = allPotentialProteins.filter(p => !currentSandwichProteins.includes(p));
 
             let currentExtras = [...(toppingOptions[currentCategory] || [])];
-            if (currentCategory === 'sandwich') { removedProteins.forEach(p => currentExtras.push({ name: p, price: 3.50 })); }
+            if (currentCategory === 'sandwich') { 
+                removedProteins.forEach(p => {
+                    let pPrice = 3.50;
+                    if (p === 'Tofu') pPrice = 3.00;
+                    if (p === 'Atún') pPrice = 2.50;
+                    if (p === 'Palta') pPrice = 2.00;
+                    currentExtras.push({ name: p, price: pPrice });
+                });
+            }
 
             currentExtras.forEach(t => { if(selectedToppings.has(t.name)) tTotal += t.price; });
             let fruitExtra = (currentCategory === 'parfait' && currentProductName === 'Parfait de Frutas Personalizable' && selectedFruits.size > 3) ? (selectedFruits.size - 3) * 1.5 : 0;
@@ -958,7 +988,15 @@
             const removedProteins = allPotentialProteins.filter(p => !currentSandwichProteins.includes(p));
 
             let currentExtrasList = [...(toppingOptions[currentCategory] || [])];
-            if (currentCategory === 'sandwich') { removedProteins.forEach(p => currentExtrasList.push({ name: p, price: 3.50 })); }
+            if (currentCategory === 'sandwich') { 
+                removedProteins.forEach(p => {
+                    let pPrice = 3.50;
+                    if (p === 'Tofu') pPrice = 3.00;
+                    if (p === 'Atún') pPrice = 2.50;
+                    if (p === 'Palta') pPrice = 2.00;
+                    currentExtrasList.push({ name: p, price: pPrice });
+                });
+            }
 
             currentExtrasList.forEach(t => { if(selectedToppings.has(t.name)) tTotal += t.price; });
             let fruitExtra = (currentCategory === 'parfait' && currentProductName === 'Parfait de Frutas Personalizable' && selectedFruits.size > 3) ? (selectedFruits.size - 3) * 1.5 : 0;
@@ -975,7 +1013,8 @@
             } else if (currentCategory === 'postres') {
                 opt = `Dulzor: ${selectedSweetnessLevel} ${toppingsArr ? '| ' + toppingsArr : ''}`;
             } else if (currentCategory === 'parfait') {
-                opt = (currentProductName === 'Parfait de Frutas Personalizable') ? (selectedFruits.size > 0 ? Array.from(selectedFruits).join(", ") : "Base yogurt") : "Clásico";
+                const fruits = (currentProductName === 'Parfait de Frutas Personalizable') ? (selectedFruits.size > 0 ? Array.from(selectedFruits).join(", ") : "Base yogurt") : "Clásico";
+                opt = `${fruits} ${toppingsArr ? '| ' + toppingsArr : ''}`;
             } else if (currentCategory === 'helado') {
                 opt = `${currentSizeName} ${toppingsArr ? '| ' + toppingsArr : ''}`;
             } else {
@@ -992,9 +1031,9 @@
             document.getElementById('cart-footer').classList.remove('hidden'); list.innerHTML = ''; let gTotal = 0;
             cart.forEach(item => { 
                 gTotal += item.price; 
-                const div = document.createElement('div'); div.className = 'flex gap-4 py-4 border-b border-black/5 items-center text-black text-black'; 
+                const div = document.createElement('div'); div.className = 'flex gap-4 py-4 border-b border-black/5 items-center text-black'; 
                 const imgTag = item.img ? `<img src="${item.img}">` : `<div class="cart-img-placeholder text-black">ALLIN</div>`;
-                div.innerHTML = `<div class="cart-img-box text-black">${imgTag}</div><div class="flex-grow text-black text-black"><h4 class="font-serif text-sm font-bold text-black text-black">${item.name}</h4><span class="text-[9px] uppercase font-bold opacity-30 text-black text-black leading-tight block mt-1">${item.option}</span></div><div class="text-right text-black text-black"><span class="font-bold text-xs block text-black text-black">S/ ${item.price.toFixed(2)}</span><button onclick="removeItem(${item.id})" class="text-[8px] font-bold text-red-400 mt-2 uppercase text-black text-black">Quitar</button></div>`; 
+                div.innerHTML = `<div class="cart-img-box text-black">${imgTag}</div><div class="flex-grow text-black"><h4 class="font-serif text-sm font-bold text-black">${item.name}</h4><span class="text-[9px] uppercase font-bold opacity-30 text-black leading-tight block mt-1">${item.option}</span></div><div class="text-right text-black"><span class="font-bold text-xs block text-black">S/ ${item.price.toFixed(2)}</span><button onclick="removeItem(${item.id})" class="text-[8px] font-bold text-red-400 mt-2 uppercase text-black">Quitar</button></div>`; 
                 list.appendChild(div); 
             });
             totalEl.innerText = `S/ ${gTotal.toFixed(2)}`;
@@ -1009,7 +1048,7 @@
             list.innerHTML = ''; let gTotal = 0;
             cart.forEach(item => { gTotal += item.price; const imgTag = item.img ? `<img src="${item.img}">` : `<div class="cart-img-placeholder text-black">ALLIN</div>`;
                 const div = document.createElement('div'); div.className = 'flex gap-4 items-center mb-6 text-black'; 
-                div.innerHTML = `<div class="cart-img-box text-black text-black">${imgTag}</div><div class="flex-grow text-black text-black"><h4 class="font-serif text-sm font-bold text-black text-black">${item.name}</h4><p class="text-[9px] text-gray-400 mt-1 uppercase text-black text-black leading-tight">${item.option}</p><span class="font-bold text-xs text-black text-black">S/ ${item.price.toFixed(2)}</span></div>`; 
+                div.innerHTML = `<div class="cart-img-box text-black text-black">${imgTag}</div><div class="flex-grow text-black text-black text-black text-black"><h4 class="font-serif text-sm font-bold text-black text-black">${item.name}</h4><p class="text-[9px] text-gray-400 mt-1 uppercase text-black leading-tight text-black">${item.option}</p><span class="font-bold text-xs text-black">S/ ${item.price.toFixed(2)}</span></div>`; 
                 list.appendChild(div); 
             });
             totalEl.innerText = `S/ ${gTotal.toFixed(2)}`;
@@ -1023,6 +1062,22 @@
         }
         function resetApp() { document.getElementById('success-modal').style.display = 'none'; cart = []; document.getElementById('cart-count').innerText = '0'; window.scrollTo({top:0, behavior:'smooth'}); }
         window.addEventListener('load', () => setTimeout(() => document.getElementById('hero-img')?.classList.add('active'), 300));
+
+        // Lógica para cambiar color de la "IN" del logo al llegar al footer
+        window.addEventListener('scroll', () => {
+            const logoIn = document.getElementById('nav-logo-in');
+            const footer = document.getElementById('footer-main');
+            if (logoIn && footer) {
+                const footerRect = footer.getBoundingClientRect();
+                if (footerRect.top < 80) { // Si el footer está cerca de la parte superior (donde está el nav)
+                    logoIn.classList.remove('text-[var(--accent)]');
+                    logoIn.classList.add('text-white');
+                } else {
+                    logoIn.classList.remove('text-white');
+                    logoIn.classList.add('text-[var(--accent)]');
+                }
+            }
+        });
     </script>
 </body>
 </html>

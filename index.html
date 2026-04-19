@@ -48,7 +48,7 @@
             display: flex;
             align-items: baseline;
         }
-        .logo-a-inverted { display: inline-block; transform: rotate(180deg); margin-right: 0.12em; line-height: 0.7; }
+        
         .font-rappi { font-family: 'Playfair Display', serif; font-style: italic; font-weight: 900; }
 
         /* ONDAS */
@@ -65,7 +65,7 @@
             background: white; z-index: 500; box-shadow: -20px 0 50px rgba(0,0,0,0.1);
             padding: 2.2rem; display: flex; flex-direction: column;
             transform: translateX(100%); 
-            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: transform color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .side-panel.active { transform: translateX(0); }
 
@@ -152,6 +152,8 @@
 
         /* SECCIÓN TESTIMONIOS */
         .testimonial-card { background: white; border-radius: 2rem; padding: 2.5rem; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 10px 30px rgba(0,0,0,0.02); }
+
+        .sandwich-step-label { font-size: 10px; font-weight: 800; text-transform: uppercase; color: #999; margin-top: 1.5rem; margin-bottom: 0.75rem; letter-spacing: 0.1em; }
     </style>
 </head>
 <body>
@@ -160,7 +162,7 @@
     <nav class="fixed w-full z-40 px-6 md:px-12 py-6 md:py-8 bg-[var(--nav-bg)]/90 backdrop-blur-md border-b border-black/5 text-black">
         <div class="container-custom flex justify-between items-center text-black">
             <div class="font-logo text-2xl md:text-3xl cursor-pointer" onclick="window.scrollTo(0,0)">
-                <span><span class="logo-a-inverted text-black">V</span>LL</span><span class="text-[var(--logo-morado)]">IN</span>
+                <span>ALL</span><span class="text-[var(--logo-morado)]">IN</span>
             </div>
             <div class="hidden md:flex space-x-12 text-[10px] uppercase font-bold tracking-[0.4em]">
                 <a href="#shop" class="hover:text-[var(--pitaya)] transition-colors text-black">Menú</a>
@@ -262,7 +264,7 @@
             <div class="category-row">
                 <div class="row-glow glow-smoothies"></div>
                 <div class="container-custom">
-                    <h2 class="font-serif text-5xl md:text-6xl font-black italic tracking-tighter mb-12 border-b border-black/5 pb-8 text-black">Smoothies</h2>
+                    <h2 class="font-serif text-5xl md:text-6xl font-black italic tracking-tighter mb-12 border-b border-black/5 pb-8 text-black text-black text-black">Smoothies</h2>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-black">
                         <div class="product-card group" onclick="openCustomizer('Power Banana', 'smoothie', 25, 'SMOOTHIE-BANANA.png')">
                             <div class="aspect-[3/4] relative"><img src="SMOOTHIE-BANANA.png"><div class="personalizar-overlay"><span class="personalizar-tag">Personalizar</span></div></div>
@@ -276,8 +278,8 @@
                             <div class="aspect-[3/4] relative"><img src="SMOOTHIE-NARANJA.png"><div class="personalizar-overlay"><span class="personalizar-tag">Personalizar</span></div></div>
                             <div class="p-8 text-black"><span class="text-[9px] font-black uppercase text-[var(--accent)] block mb-1 text-black">HIDRATACIÓN</span><h3 class="font-serif text-2xl text-black">Solar Glow</h3><span class="font-bold italic text-lg text-black">S/ 25</span></div>
                         </div>
-                        <div class="product-card group" onclick="openCustomizer('Zen Blue', 'smoothie', 25, 'SMOOTHIE-AZUL.png')">
-                            <div class="aspect-[3/4] relative"><img src="SMOOTHIE-AZUL.png"><div class="personalizar-overlay"><span class="personalizar-tag">Personalizar</span></div></div>
+                        <div class="product-card group text-black" onclick="openCustomizer('Zen Blue', 'smoothie', 25, 'SMOOTHIE-AZUL.png')">
+                            <div class="aspect-[3/4] relative"><img src="SMOOTHIE-AZUL.png"><div class="personalizar-overlay"><span class="personalizar-tag text-black">Personalizar</span></div></div>
                             <div class="p-8 text-black"><span class="text-[9px] font-black uppercase text-[var(--accent)] block mb-1">DOPAMINA</span><h3 class="font-serif text-2xl text-black">Zen Blue</h3><span class="font-bold italic text-lg">S/ 25</span></div>
                         </div>
                     </div>
@@ -288,23 +290,23 @@
             <div class="category-row">
                 <div class="row-glow glow-sandwiches"></div>
                 <div class="container-custom">
-                    <h2 class="font-serif text-5xl md:text-6xl font-black italic tracking-tighter mb-12 border-b border-black/5 pb-8 text-black">Sandwiches</h2>
+                    <h2 class="font-serif text-5xl md:text-6xl font-black italic tracking-tighter mb-12 border-b border-black/5 pb-8 text-black text-black text-black">Sandwiches</h2>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                         <div class="product-card group" onclick="openCustomizer('Sandwich Full Fibra', 'sandwich', 22, 'PAN-FIBRA.png')">
                             <div class="aspect-square relative"><img src="PAN-FIBRA.png"><div class="personalizar-overlay"><span class="personalizar-tag">Personalizar</span></div></div>
-                            <div class="p-8 flex justify-between items-center"><h3 class="font-serif text-2xl">Sandwich Full Fibra</h3><span class="font-bold italic text-lg">S/ 22</span></div>
+                            <div class="p-8 flex justify-between items-center"><h3 class="font-serif text-2xl text-black">Sandwich Full Fibra</h3><span class="font-bold italic text-lg text-black">S/ 22</span></div>
                         </div>
                         <div class="product-card group" onclick="openCustomizer('Sandwich Apaltado', 'sandwich', 25, 'PAN-PALTOSO.png')">
                             <div class="aspect-square relative"><img src="PAN-PALTOSO.png"><div class="personalizar-overlay"><span class="personalizar-tag">Personalizar</span></div></div>
-                            <div class="p-8 flex justify-between items-center"><h3 class="font-serif text-2xl">Sandwich Apaltado</h3><span class="font-bold italic text-lg">S/ 25</span></div>
+                            <div class="p-8 flex justify-between items-center"><h3 class="font-serif text-2xl text-black">Sandwich Apaltado</h3><span class="font-bold italic text-lg text-black">S/ 25</span></div>
                         </div>
                         <div class="product-card group" onclick="openCustomizer('Sandwich Taypa', 'sandwich', 28, 'PAN-TAYPA.png')">
                             <div class="aspect-square relative"><img src="PAN-TAYPA.png"><div class="personalizar-overlay"><span class="personalizar-tag">Personalizar</span></div></div>
-                            <div class="p-8 flex justify-between items-center"><h3 class="font-serif text-2xl">Sandwich Taypa</h3><span class="font-bold italic text-lg">S/ 28</span></div>
+                            <div class="p-8 flex justify-between items-center"><h3 class="font-serif text-2xl text-black">Sandwich Taypa</h3><span class="font-bold italic text-lg text-black">S/ 28</span></div>
                         </div>
                         <div class="product-card group" onclick="openCustomizer('Sandwich Clásico', 'sandwich', 20, 'SANDWICH.png')">
                             <div class="aspect-square relative"><img src="SANDWICH.png"><div class="personalizar-overlay"><span class="personalizar-tag">Personalizar</span></div></div>
-                            <div class="p-8 flex justify-between items-center"><h3 class="font-serif text-2xl">Sandwich Clásico</h3><span class="font-bold italic text-lg">S/ 20</span></div>
+                            <div class="p-8 flex justify-between items-center"><h3 class="font-serif text-2xl text-black">Sandwich Clásico</h3><span class="font-bold italic text-lg text-black">S/ 20</span></div>
                         </div>
                     </div>
                 </div>
@@ -314,23 +316,23 @@
             <div class="category-row text-black">
                 <div class="row-glow glow-refrescos"></div>
                 <div class="container-custom">
-                    <h2 class="font-serif text-5xl md:text-6xl font-black italic tracking-tighter mb-12 border-b border-black/5 pb-8 text-black">Refrescos</h2>
+                    <h2 class="font-serif text-5xl md:text-6xl font-black italic tracking-tighter mb-12 border-b border-black/5 pb-8 text-black text-black text-black">Refrescos</h2>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                         <div class="product-card group" onclick="openCustomizer('Bebida de Tumbo', 'refresco', 12, 'BEBIDA-TUMBO.png')">
                             <div class="aspect-[3/4] relative text-black"><img src="BEBIDA-TUMBO.png"><div class="personalizar-overlay"><span class="personalizar-tag">Personalizar</span></div></div>
-                            <div class="p-8 flex justify-between items-center text-black"><h3 class="font-serif text-2xl text-black">Bebida de Tumbo</h3><span class="font-bold italic text-lg text-black">S/ 12</span></div>
+                            <div class="p-8 flex justify-between items-center text-black text-black"><h3 class="font-serif text-2xl text-black">Bebida de Tumbo</h3><span class="font-bold italic text-lg text-black">S/ 12</span></div>
                         </div>
                         <div class="product-card group" onclick="openCustomizer('Bebida de Aguaje', 'refresco', 12, 'BEBIDA-AGUAJE.png')">
                             <div class="aspect-[3/4] relative"><img src="BEBIDA-AGUAJE.png"><div class="personalizar-overlay"><span class="personalizar-tag">Personalizar</span></div></div>
-                            <div class="p-8 flex justify-between items-center text-black"><h3 class="font-serif text-2xl text-black">Bebida de Aguaje</h3><span class="font-bold italic text-lg text-black">S/ 12</span></div>
+                            <div class="p-8 flex justify-between items-center text-black text-black"><h3 class="font-serif text-2xl text-black">Bebida de Aguaje</h3><span class="font-bold italic text-lg text-black">S/ 12</span></div>
                         </div>
                         <div class="product-card group" onclick="openCustomizer('Bebida de Maracuyá', 'refresco', 12, 'BEBIDA-MARACUYA.png')">
                             <div class="aspect-[3/4] relative text-black"><img src="BEBIDA-MARACUYA.png"><div class="personalizar-overlay"><span class="personalizar-tag">Personalizar</span></div></div>
-                            <div class="p-8 flex justify-between items-center text-black"><h3 class="font-serif text-2xl text-black">Bebida de Maracuyá</h3><span class="font-bold italic text-lg text-black">S/ 12</span></div>
+                            <div class="p-8 flex justify-between items-center text-black text-black"><h3 class="font-serif text-2xl text-black">Bebida de Maracuyá</h3><span class="font-bold italic text-lg text-black">S/ 12</span></div>
                         </div>
                         <div class="product-card group" onclick="openCustomizer('Bebida de Carambola', 'refresco', 12, 'BEBIDA-CARAMBOLA.png')">
                             <div class="aspect-[3/4] relative text-black"><img src="BEBIDA-CARAMBOLA.png"><div class="personalizar-overlay"><span class="personalizar-tag">Personalizar</span></div></div>
-                            <div class="p-8 flex justify-between items-center text-black"><h3 class="font-serif text-2xl text-black">Bebida de Carambola</h3><span class="font-bold italic text-lg text-black">S/ 12</span></div>
+                            <div class="p-8 flex justify-between items-center text-black text-black"><h3 class="font-serif text-2xl text-black">Bebida de Carambola</h3><span class="font-bold italic text-lg text-black">S/ 12</span></div>
                         </div>
                     </div>
                 </div>
@@ -340,19 +342,19 @@
             <div class="category-row text-black">
                 <div class="row-glow glow-helados"></div>
                 <div class="container-custom">
-                    <h2 class="font-serif text-5xl md:text-6xl font-black italic tracking-tighter mb-12 border-b border-black/5 pb-8 text-black">Helados</h2>
+                    <h2 class="font-serif text-5xl md:text-6xl font-black italic tracking-tighter mb-12 border-b border-black/5 pb-8 text-black text-black text-black text-black">Helados</h2>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         <div class="product-card group" onclick="openCustomizer('Helado de Tuna', 'helado', 15, 'HELADO-TUNA.png')">
                             <div class="aspect-square relative text-black"><img src="HELADO-TUNA.png"><div class="personalizar-overlay"><span class="personalizar-tag text-black">Personalizar</span></div></div>
-                            <div class="p-8 flex justify-between items-center text-black"><h3 class="font-serif text-2xl text-black">Helado de Tuna</h3><span class="font-bold italic text-lg text-black">S/ 15</span></div>
+                            <div class="p-8 flex justify-between items-center text-black text-black text-black"><h3 class="font-serif text-2xl text-black">Helado de Tuna</h3><span class="font-bold italic text-lg text-black">S/ 15</span></div>
                         </div>
                         <div class="product-card group" onclick="openCustomizer('Helado de Açaí', 'helado', 15, 'HELADO-DE-ACAI.png')">
                             <div class="aspect-square relative text-black"><img src="HELADO-DE-ACAI.png"><div class="personalizar-overlay"><span class="personalizar-tag text-black">Personalizar</span></div></div>
-                            <div class="p-8 flex justify-between items-center text-black"><h3 class="font-serif text-2xl text-black">Helado de Açaí</h3><span class="font-bold italic text-lg text-black">S/ 15</span></div>
+                            <div class="p-8 flex justify-between items-center text-black text-black text-black"><h3 class="font-serif text-2xl text-black">Helado de Açaí</h3><span class="font-bold italic text-lg text-black">S/ 15</span></div>
                         </div>
                         <div class="product-card group" onclick="openCustomizer('Helado de Camu Camu', 'helado', 15, 'HELADO-CAMU.png')">
                             <div class="aspect-square relative text-black"><img src="HELADO-CAMU.png"><div class="personalizar-overlay"><span class="personalizar-tag text-black">Personalizar</span></div></div>
-                            <div class="p-8 flex justify-between items-center text-black"><h3 class="font-serif text-2xl whitespace-nowrap text-black">Helado de Camu Camu</h3><span class="font-bold italic text-lg text-black">S/ 15</span></div>
+                            <div class="p-8 flex justify-between items-center text-black text-black text-black"><h3 class="font-serif text-2xl whitespace-nowrap text-black text-black text-black">Helado de Camu Camu</h3><span class="font-bold italic text-lg text-black">S/ 15</span></div>
                         </div>
                     </div>
                 </div>
@@ -360,55 +362,58 @@
 
             <!-- Parfait -->
             <div class="category-row text-black">
-                <div class="row-glow glow-parfait text-black"></div>
+                <div class="row-glow glow-parfait text-black text-black text-black"></div>
                 <div class="container-custom">
-                    <h2 class="font-serif text-5xl md:text-6xl font-black italic tracking-tighter mb-12 border-b border-black/5 pb-8 text-black">Parfait de Yogurt</h2>
+                    <h2 class="font-serif text-5xl md:text-6xl font-black italic tracking-tighter mb-12 border-b border-black/5 pb-8 text-black text-black text-black text-black">Parfait de Yogurt</h2>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-black">
                         <div class="product-card group" onclick="openCustomizer('Parfait de Frutas Personalizable', 'parfait', 18, 'PARFAIT-FRUTAS.png')">
                             <div class="aspect-[3/4] relative text-black"><img src="PARFAIT-FRUTAS.png"><div class="personalizar-overlay"><span class="personalizar-tag text-black">Personalizar</span></div></div>
-                            <div class="p-8 text-black"><h3 class="font-serif text-2xl text-black">Parfait Frutas</h3><span class="font-bold italic text-lg text-black">S/ 18</span></div>
+                            <div class="p-8 text-black text-black text-black text-black text-black"><h3 class="font-serif text-2xl text-black">Parfait Frutas</h3><span class="font-bold italic text-lg text-black">S/ 18</span></div>
                         </div>
                         <div class="product-card group text-black" onclick="openCustomizer('Parfait de Arándano', 'parfait', 16, 'PARFAIT-ARANDANO.png')">
                             <div class="aspect-[3/4] relative text-black"><img src="PARFAIT-ARANDANO.png"><div class="personalizar-overlay"><span class="personalizar-tag text-black">Personalizar</span></div></div>
-                            <div class="p-8 text-black"><h3 class="font-serif text-2xl text-black">Parfait Arándano</h3><span class="font-bold italic text-lg text-black">S/ 16</span></div>
+                            <div class="p-8 text-black text-black text-black text-black text-black"><h3 class="font-serif text-2xl text-black">Parfait Arándano</h3><span class="font-bold italic text-lg text-black">S/ 16</span></div>
                         </div>
                         <div class="product-card group text-black" onclick="openCustomizer('Parfait de Banana', 'parfait', 16, 'PARFAIT-BANANA.png')">
-                            <div class="aspect-[3/4] relative text-black"><img src="PARFAIT-BANANA.png"><div class="personalizar-overlay"><span class="personalizar-tag text-black">Personalizar</span></div></div>
-                            <div class="p-8 text-black"><h3 class="font-serif text-2xl text-black">Parfait Banana</h3><span class="font-bold italic text-lg text-black">S/ 16</span></div>
+                            <div class="aspect-[3/4] relative text-black text-black"><img src="PARFAIT-BANANA.png"><div class="personalizar-overlay"><span class="personalizar-tag text-black">Personalizar</span></div></div>
+                            <div class="p-8 text-black text-black text-black text-black text-black"><h3 class="font-serif text-2xl text-black">Parfait Banana</h3><span class="font-bold italic text-lg text-black">S/ 16</span></div>
                         </div>
                         <div class="product-card group text-black" onclick="openCustomizer('Parfait de Fresa', 'parfait', 16, 'PARFAIT-FRESA.png')">
-                            <div class="aspect-[3/4] relative text-black"><img src="PARFAIT-FRESA.png"><div class="personalizar-overlay"><span class="personalizar-tag text-black">Personalizar</span></div></div>
-                            <div class="p-8 text-black"><h3 class="font-serif text-2xl text-black text-black text-black">Parfait de Fresa</h3><span class="font-bold italic text-lg text-black">S/ 16</span></div>
+                            <div class="aspect-[3/4] relative text-black text-black"><img src="PARFAIT-FRESA.png"><div class="personalizar-overlay"><span class="personalizar-tag text-black">Personalizar</span></div></div>
+                            <div class="p-8 text-black text-black text-black text-black text-black text-black text-black"><h3 class="font-serif text-2xl text-black text-black">Parfait de Fresa</h3><span class="font-bold italic text-lg text-black">S/ 16</span></div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Postres -->
-            <div class="category-row text-black">
+            <div class="category-row text-black text-black text-black">
                 <div class="row-glow glow-postres"></div>
                 <div class="container-custom">
-                    <h2 class="font-serif text-5xl md:text-6xl font-black italic tracking-tighter mb-12 border-b border-black/5 pb-8 text-black">Postres</h2>
+                    <h2 class="font-serif text-5xl md:text-6xl font-black italic tracking-tighter mb-12 border-b border-black/5 pb-8 text-black text-black text-black text-black text-black">Postres</h2>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                         <div class="product-card group" onclick="openCustomizer('Galleta Berry Cacao 70%', 'postres', 8, 'GALLETA-ARANDANOS-Y-CACAO.png')">
                             <div class="aspect-square relative"><img src="GALLETA-ARANDANOS-Y-CACAO.png"><div class="personalizar-overlay"><span class="personalizar-tag">Personalizar</span></div></div>
-                            <div class="p-8 text-black"><h3 class="font-serif text-2xl text-black">Berry Cacao 70%</h3><span class="font-bold italic text-lg text-black">S/ 8</span></div>
+                            <div class="p-8 text-black text-black text-black"><h3 class="font-serif text-2xl text-black text-black">Berry Cacao 70%</h3><span class="font-bold italic text-lg text-black">S/ 8</span></div>
                         </div>
                         <div class="product-card group" onclick="openCustomizer('Bombón Yogurt', 'postres', 6, 'BOMBOM-DE-CHOCOLATE.png')">
                             <div class="aspect-square relative text-black"><img src="BOMBOM-DE-CHOCOLATE.png"><div class="personalizar-overlay"><span class="personalizar-tag text-black">Personalizar</span></div></div>
-                            <div class="p-8 text-black"><h3 class="font-serif text-2xl text-black">Bombón Yogurt</h3><span class="font-bold italic text-lg text-black">S/ 6</span></div>
+                            <div class="p-8 text-black text-black text-black text-black text-black text-black text-black"><h3 class="font-serif text-2xl text-black">Bombón Yogurt</h3><span class="font-bold italic text-lg text-black">S/ 6</span></div>
                         </div>
-                        <div class="product-card group" onclick="openCustomizer('Waffle Avena Orgánica', 'postres', 28, 'WAFFLE.png')">
-                            <div class="aspect-square relative text-black"><img src="WAFFLE.png"><div class="personalizar-overlay"><span class="personalizar-tag text-black">Personalizar</span></div></div>
-                            <div class="p-8 text-black"><h3 class="font-serif text-2xl text-black">Waffle Orgánico</h3><span class="font-bold italic text-lg text-[var(--accent)]">S/ 28</span></div>
+                        <div class="product-card group" onclick="openCustomizer('Waffle Avena Orgánica', 'postres', 27, 'WAFFLE.png')">
+                            <div class="aspect-square relative text-black text-black text-black text-black text-black text-black text-black"><img src="WAFFLE.png"><div class="personalizar-overlay"><span class="personalizar-tag text-black text-black text-black text-black text-black">Personalizar</span></div></div>
+                            <div class="p-8 text-black text-black text-black text-black"><h3 class="font-serif text-2xl text-black text-black text-black">Waffle Orgánico</h3><span class="font-bold italic text-lg text-[var(--accent)]">S/ 27</span></div>
                         </div>
                         <div class="product-card group text-black" onclick="openCustomizer('Enrollado Pistacho', 'postres', 15, 'ENRROLADO-PISTACHO.png')">
                             <div class="aspect-square relative text-black"><img src="ENRROLADO-PISTACHO.png"><div class="personalizar-overlay"><span class="personalizar-tag text-black">Personalizar</span></div></div>
-                            <div class="p-8 text-black"><h3 class="font-serif text-2xl text-black">Enrollado Pistacho</h3><span class="font-bold italic text-lg text-[var(--accent)] text-black">S/ 15</span></div>
+                            <div class="p-8 text-black text-black text-black text-black text-black text-black text-black text-black text-black"><h3 class="font-serif text-2xl text-black">Enrollado Pistacho</h3><span class="font-bold italic text-lg text-[var(--accent)] text-black">S/ 15</span></div>
                         </div>
                         <div class="product-card group text-black" onclick="openCustomizer('Enrollado Almendra', 'postres', 15, 'ENROLLADO-ALMENDRA.png')">
-                            <div class="aspect-square relative text-black"><img src="ENROLLADO-ALMENDRA.png"><div class="personalizar-overlay"><span class="personalizar-tag text-black">Personalizar</span></div></div>
-                            <div class="p-8 text-black"><h3 class="font-serif text-2xl text-black">Enrollado Almendra</h3><span class="font-bold italic text-lg text-[var(--accent)] text-black">S/ 15</span></div>
+                            <div class="aspect-square relative text-black"><img src="ENROLLADO-ALMENDRA.png"><div class="personalizar-overlay"><span class="personalizar-tag text-black text-black">Personalizar</span></div></div>
+                            <div class="p-8 text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black">
+                                <h3 class="font-serif text-2xl text-black text-black">Enrollado Almendra</h3>
+                                <span class="font-bold italic text-lg text-[var(--accent)] text-black">S/ 15</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -420,7 +425,7 @@
             <div class="container-custom">
                 <div class="flex flex-col items-center mb-16">
                     <span class="text-[10px] font-black uppercase text-[var(--accent)] tracking-[0.4em] mb-4">La Comunidad Dice</span>
-                    <h2 class="font-serif text-4xl md:text-5xl italic tracking-tighter text-center">Experiencias Allin</h2>
+                    <h2 class="font-serif text-4xl md:text-5xl italic tracking-tighter text-center text-black">Experiencias Allin</h2>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <!-- Testimonio 1 -->
@@ -464,46 +469,49 @@
         </section>
 
         <!-- FOOTER -->
-        <footer id="about" class="py-16 bg-[var(--accent)] text-white relative">
-            <div id="about-anchor" class="absolute -top-32 text-white"></div>
+        <footer id="about" class="py-16 bg-[var(--accent)] text-white relative text-white">
+            <div id="about-anchor" class="absolute -top-32 text-white text-white"></div>
             <div class="container-custom relative z-10 text-white">
-                <div class="grid lg:grid-cols-2 gap-12 items-stretch mb-16 text-white">
-                    <div class="h-full flex flex-col justify-between py-2">
-                        <h2 class="footer-habla font-serif text-[clamp(2.5rem,6vw,6.5rem)] font-black leading-[0.9] text-white uppercase">LA <br> TIERRA <br> <span class="italic text-[var(--pitaya)]">HABLA</span></h2>
-                        <div class="hidden lg:block"></div> 
+                <div class="grid lg:grid-cols-2 gap-12 items-stretch mb-16 text-white text-white text-white">
+                    <div class="h-full flex flex-col justify-start py-2">
+                        <h2 class="footer-habla font-serif text-[clamp(2.5rem,6vw,6.5rem)] font-black leading-[0.9] text-white uppercase text-white">LA <br> TIERRA <br> <span class="italic text-[var(--pitaya)] text-white text-white">HABLA</span></h2>
+                        <!-- Contenedor de imagen ajustado con recorte a la derecha -->
+                        <div class="mt-20 max-w-md overflow-hidden rounded-[2.5rem] shadow-2xl">
+                            <img src="DELIVERY.png" alt="Delivery" class="w-[110%] max-w-none object-cover origin-left">
+                        </div>
                     </div>
 
                     <div class="space-y-12 text-white">
                         <div>
-                            <span class="text-[10px] font-bold uppercase text-[var(--pitaya)] block mb-3 opacity-95 tracking-[0.3em]">Acerca de nosotros</span>
-                            <p class="text-sm md:text-base font-light leading-relaxed opacity-70 italic max-w-xl text-white mb-10">Somos el vínculo entre la tierra peruana y tu estilo de vida cotidiano. Nutrición sensorial profunda.</p>
+                            <span class="text-[10px] font-bold uppercase text-[var(--pitaya)] block mb-3 opacity-95 tracking-[0.3em] text-white">Acerca de nosotros</span>
+                            <p class="text-sm md:text-base font-light leading-relaxed opacity-70 italic max-w-xl text-white mb-10 text-white text-white">Somos el vínculo entre la tierra peruana y tu estilo de vida cotidiano. Buscamos revalorizar nuestras frutas nativas a través de una nutrición sensorial profunda.</p>
                             
-                            <div class="space-y-4 pt-4 border-t border-white/10">
-                                <span class="text-[10px] font-bold uppercase text-[var(--pitaya)] block mb-3 opacity-95 tracking-[0.3em]">Nuestra Raíz: Consciencia que Florece</span>
-                                <p class="text-xs md:text-sm font-light leading-relaxed opacity-70 italic max-w-xl text-white">En Allin, honramos la riqueza del Perú trabajando con agricultores locales y respetando los ciclos naturales. Apostamos por prácticas sostenibles, empaques eco-amigables y un consumo responsable.</p>
-                                <p class="text-xs md:text-sm font-light leading-relaxed opacity-70 italic max-w-xl text-white">Súmate eligiendo lo natural y lo local.</p>
-                                <p class="text-xs md:text-sm font-bold italic text-white">Porque si la tierra está bien, nosotros también. 🌱</p>
+                            <div class="space-y-4 pt-4 border-t border-white/10 text-white text-white">
+                                <span class="text-[10px] font-bold uppercase text-[var(--pitaya)] block mb-3 opacity-95 tracking-[0.3em] text-white">Nuestra Raíz: Consciencia que Florece</span>
+                                <p class="text-xs md:text-sm font-light leading-relaxed opacity-70 italic max-w-xl text-white text-white text-white">En Allin, honramos la riqueza del Perú trabajando con agricultores locales y respetando los ciclos naturales. Apostamos por prácticas sostenibles, empaques eco-amigables y un consumo responsable.</p>
+                                <p class="text-xs md:text-sm font-light leading-relaxed opacity-70 italic max-w-xl text-white text-white text-white">Súmate eligiendo lo natural y lo local.</p>
+                                <p class="text-xs md:text-sm font-bold italic text-white opacity-70 text-white text-white">Porque si la tierra está bien, nosotros también. 🌱</p>
                             </div>
                         </div>
                         <div id="contact-block" class="grid grid-cols-2 gap-10 pt-6 border-t border-white/5 text-white">
-                            <div><p class="text-[9px] font-bold uppercase text-[var(--pitaya)] mb-2 tracking-[0.2em]">Pidenos por</p><span class="font-rappi text-3xl md:text-5xl cursor-pointer hover:text-[var(--pitaya)] transition-colors text-white">Rappi</span></div>
-                            <div><p class="text-[9px] font-bold uppercase text-[var(--pitaya)] mb-2 tracking-[0.2em]">Contacto</p><a href="mailto:hola@allin.pe" class="font-serif text-xl md:text-2xl block hover:text-[var(--pitaya)] transition-colors text-white">hola@allin.pe</a><p class="font-bold text-lg md:text-xl tracking-wider mt-1 text-white">+51 987723610</p></div>
+                            <div><p class="text-[9px] font-bold uppercase text-[var(--pitaya)] mb-2 tracking-[0.2em] text-white text-white">Pidenos por</p><span class="font-rappi text-3xl md:text-5xl cursor-pointer hover:text-[var(--pitaya)] transition-colors text-white text-white text-white">Rappi</span></div>
+                            <div><p class="text-[9px] font-bold uppercase text-[var(--pitaya)] mb-2 tracking-[0.2em] text-white text-white">Contacto</p><a href="mailto:hola@allin.pe" class="font-serif text-xl md:text-2xl block hover:text-[var(--pitaya)] transition-colors text-white text-white text-white text-white text-white">hola@allin.pe</a><p class="font-bold text-lg md:text-xl tracking-wider mt-1 text-white text-white text-white">+51 987723610</p></div>
                         </div>
                     </div>
                 </div>
                 
                 <div id="final-bar" class="pt-10 border-t border-white/10 grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-center text-white">
                     <div class="flex flex-col items-center md:items-start gap-5">
-                        <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-[var(--pitaya)] opacity-90 text-[var(--pitaya)]">REDES SOCIALES</p>
+                        <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-[var(--pitaya)] opacity-90 text-[var(--pitaya)] text-white text-white">REDES SOCIALES</p>
                         <div class="flex gap-5 items-center text-white">
-                            <a href="#" class="social-circle text-white"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path></svg></a>
-                            <a href="#" class="social-circle text-white"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-1.13-.31-2.34-.25-3.41.33-.71.38-1.25 1.03-1.51 1.8-.29.81-.28 1.72.02 2.52.43 1.17 1.39 2.13 2.58 2.52 1.08.38 2.29.31 3.32-.21.84-.43 1.53-1.14 1.9-1.98.24-.55.35-1.14.36-1.74-.01-4.43-.01-8.85-.01-13.27z"/></svg></a>
+                            <a href="#" class="social-circle text-white text-white text-white"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path></svg></a>
+                            <a href="#" class="social-circle text-white text-white text-white text-white"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-1.13-.31-2.34-.25-3.41.33-.71.38-1.25 1.03-1.51 1.8-.29.81-.28 1.72.02 2.52.43 1.17 1.39 2.13 2.58 2.52 1.08.38 2.29.31 3.32-.21.84-.43 1.53-1.14 1.9-1.98.24-.55.35-1.14.36-1.74-.01-4.43-.01-8.85-.01-13.27z"/></svg></a>
                         </div>
                     </div>
-                    <div class="flex flex-col items-center text-white"><p class="text-[9px] uppercase text-white/50 tracking-[0.4em] italic leading-relaxed">© 2026 ALLIN Perú — Life Style orgánico</p></div>
+                    <div class="flex flex-col items-center text-white text-white text-white text-white"><p class="text-[9px] uppercase text-white/50 tracking-[0.4em] italic leading-relaxed text-white">© 2026 ALLIN Perú — Life Style orgánico</p></div>
                     <div class="flex flex-col items-center md:items-end gap-1">
-                        <p class="text-[10px] font-bold uppercase text-[var(--pitaya)] opacity-80 tracking-[0.2em] text-[var(--pitaya)]">DIRECCIÓN</p>
-                        <p class="font-serif text-base md:text-lg italic text-white">Av. La Encalada 1234, Surco</p>
+                        <p class="text-[10px] font-bold uppercase text-[var(--pitaya)] opacity-80 tracking-[0.2em] text-[var(--pitaya)] text-white text-white">DIRECCIÓN</p>
+                        <p class="font-serif text-base md:text-lg italic text-white text-white text-white">Av. La Encalada 1234, Surco</p>
                     </div>
                 </div>
             </div>
@@ -511,94 +519,97 @@
     </div>
 
     <!-- PÁGINA DE CHECKOUT -->
-    <div id="checkout-page" class="bg-white text-black">
-        <div class="checkout-header border-b py-6 bg-white sticky top-0 z-10 text-black">
-            <div class="container-custom flex justify-between items-center text-black">
-                <div class="font-logo text-2xl text-black"><span><span class="logo-a-inverted text-black">V</span>LL</span><span class="text-[var(--logo-morado)] text-black">IN</span></div>
-                <button onclick="backFromCheckout()" class="text-[10px] font-bold uppercase tracking-widest opacity-40 hover:opacity-100 text-black">Regresar</button>
+    <div id="checkout-page" class="bg-white text-black text-black">
+        <div class="checkout-header border-b py-6 bg-white sticky top-0 z-10 text-black text-black text-black">
+            <div class="container-custom flex justify-between items-center text-black text-black">
+                <div class="font-logo text-2xl text-black"><span>ALL</span><span class="text-[var(--logo-morado)] text-black">IN</span></div>
+                <button onclick="backFromCheckout()" class="text-[10px] font-bold uppercase tracking-widest opacity-40 hover:opacity-100 text-black text-black text-black">Regresar</button>
             </div>
         </div>
-        <div class="container-custom py-16 text-black">
+        <div class="container-custom py-16 text-black text-black text-black text-black">
             <div class="grid lg:grid-cols-[1fr_400px] gap-16 items-start text-black">
                 <div class="space-y-12">
                     <div>
-                        <div class="checkout-step-title text-[var(--accent)] font-bold mb-6 uppercase flex items-center gap-3 text-black"><span class="bg-[var(--accent)] text-white w-6 h-6 inline-flex items-center justify-center rounded-full text-xs">1</span> CONTACTO</div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 text-black">
+                        <div class="checkout-step-title text-[var(--accent)] font-bold mb-6 uppercase flex items-center gap-3 text-black text-black"><span class="bg-[var(--accent)] text-white w-6 h-6 inline-flex items-center justify-center rounded-full text-xs">1</span> CONTACTO</div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 text-black text-black text-black">
                             <input type="text" id="chk-name" placeholder="Nombre" class="checkout-input-v2">
                             <input type="text" id="chk-lastname" placeholder="Apellido" class="checkout-input-v2">
                         </div>
-                        <input type="email" id="chk-email" placeholder="Correo" class="checkout-input-v2 mb-4 text-black">
-                        <input type="tel" id="chk-phone" placeholder="Celular" class="checkout-input-v2 text-black">
+                        <input type="email" id="chk-email" placeholder="Correo" class="checkout-input-v2 mb-4 text-black text-black text-black">
+                        <input type="tel" id="chk-phone" placeholder="Celular" class="checkout-input-v2 text-black text-black text-black">
                     </div>
-                    <div><div class="checkout-step-title text-[var(--accent)] font-bold mb-6 uppercase flex items-center gap-3 text-black"><span class="bg-[var(--accent)] text-white w-6 h-6 inline-flex items-center justify-center rounded-full text-xs">2</span> ENVÍO</div><input type="text" id="chk-address" placeholder="Dirección completa" class="checkout-input-v2 text-black"></div>
+                    <div><div class="checkout-step-title text-[var(--accent)] font-bold mb-6 uppercase flex items-center gap-3 text-black text-black text-black text-black"><span class="bg-[var(--accent)] text-white w-6 h-6 inline-flex items-center justify-center rounded-full text-xs">2</span> ENVÍO</div><input type="text" id="chk-address" placeholder="Dirección completa" class="checkout-input-v2 text-black text-black text-black text-black"></div>
                     <div>
-                        <div class="checkout-step-title text-[var(--accent)] font-bold mb-6 uppercase flex items-center gap-3 text-black"><span class="bg-[var(--accent)] text-white w-6 h-6 inline-flex items-center justify-center rounded-full text-xs">3</span> PAGO</div>
+                        <div class="checkout-step-title text-[var(--accent)] font-bold mb-6 uppercase flex items-center gap-3 text-black text-black text-black text-black text-black text-black"><span class="bg-[var(--accent)] text-white w-6 h-6 inline-flex items-center justify-center rounded-full text-xs">3</span> PAGO</div>
                         <div class="payment-box">
                             <div class="payment-row" onclick="selectPayment('tarjeta')"><div id="radio-tarjeta" class="payment-radio active"></div><span class="font-bold text-xs uppercase">Tarjeta</span></div>
-                            <div id="card-details-panel" class="p-6 bg-gray-50 border-b text-black">
-                                <input type="text" id="card-num" placeholder="Número tarjeta" class="checkout-input-v2 mb-4 bg-white text-black" maxlength="19">
-                                <div class="grid grid-cols-2 gap-4 text-black"><input type="text" id="card-exp" placeholder="MM/AA" class="checkout-input-v2 bg-white text-black" maxlength="5"><input type="password" id="card-cvv" placeholder="CVV" class="checkout-input-v2 bg-white text-black" maxlength="4"></div>
+                            <div id="card-details-panel" class="p-6 bg-gray-50 border-b text-black text-black text-black text-black">
+                                <input type="text" id="card-num" placeholder="Número tarjeta" class="checkout-input-v2 mb-4 bg-white text-black text-black text-black text-black" maxlength="19">
+                                <div class="grid grid-cols-2 gap-4 text-black text-black text-black text-black"><input type="text" id="card-exp" placeholder="MM/AA" class="checkout-input-v2 bg-white text-black text-black text-black text-black text-black" maxlength="5"><input type="password" id="card-cvv" placeholder="CVV" class="checkout-input-v2 bg-white text-black text-black text-black text-black text-black" maxlength="4"></div>
                             </div>
-                            <div class="payment-row" onclick="selectPayment('yape')"><div id="radio-yape" class="payment-radio text-black"></div><span class="font-bold text-xs uppercase text-black">Yape / Plin</span></div>
-                            <div id="qr-panel" class="p-8 bg-gray-50 border-b hidden text-center text-black">
-                                <div class="w-32 h-32 bg-white mx-auto flex items-center justify-center border-2 border-black/5 rounded-xl shadow-sm text-black"><svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><path d="M7 7h.01M17 7h.01M7 17h.01M17 17h.01"></path></svg></div>
-                                <p class="text-[9px] mt-4 font-bold uppercase text-[var(--accent)] text-black">Titular: Allin Perú</p>
+                            <div class="payment-row" onclick="selectPayment('yape')"><div id="radio-yape" class="payment-radio text-black text-black text-black"></div><span class="font-bold text-xs uppercase text-black text-black text-black text-black text-black">Yape / Plin</span></div>
+                            <div id="qr-panel" class="p-8 bg-gray-50 border-b hidden text-center text-black text-black text-black text-black text-black">
+                                <div class="w-32 h-32 bg-white mx-auto flex items-center justify-center border-2 border-black/5 rounded-xl shadow-sm text-black text-black text-black text-black text-black"><svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><path d="M7 7h.01M17 7h.01M7 17h.01M17 17h.01"></path></svg></div>
+                                <p class="text-[9px] mt-4 font-bold uppercase text-[var(--accent)] text-black text-black text-black text-black text-black">Titular: Allin Perú</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="bg-[#fcfbf7] p-8 rounded-3xl border border-black/5 shadow-sm sticky top-24 text-black">
-                    <h3 class="font-serif text-xl italic mb-8 border-b pb-4 text-black">Resumen</h3>
-                    <div id="checkout-items-list" class="space-y-6 mb-8 text-black"></div>
-                    <div class="pt-8 border-t flex justify-between items-baseline text-black">
-                        <span class="font-bold text-[10px] uppercase tracking-widest text-black">Total a pagar</span>
-                        <span id="chk-total" class="font-serif text-3xl font-black italic text-black">S/ 0.00</span>
+                <div class="bg-[#fcfbf7] p-8 rounded-3xl border border-black/5 shadow-sm sticky top-24 text-black text-black text-black text-black text-black text-black">
+                    <h3 class="font-serif text-xl italic mb-8 border-b pb-4 text-black text-black text-black text-black text-black">Resumen</h3>
+                    <div id="checkout-items-list" class="space-y-6 mb-8 text-black text-black text-black text-black text-black text-black"></div>
+                    <div class="pt-8 border-t flex justify-between items-baseline text-black text-black text-black text-black text-black">
+                        <span class="font-bold text-[10px] uppercase tracking-widest text-black text-black text-black text-black text-black">Total a pagar</span>
+                        <span id="chk-total" class="font-serif text-3xl font-black italic text-black text-black text-black text-black text-black text-black">S/ 0.00</span>
                     </div>
-                    <button onclick="finishOrder()" class="w-full bg-[var(--accent)] text-white py-5 rounded-xl font-bold uppercase mt-10 hover:opacity-95 shadow-xl transition-all text-black">FINALIZAR COMPRA →</button>
-                    <p id="validation-error" class="text-[9px] text-red-500 font-bold text-center mt-4 hidden uppercase tracking-widest text-black">Faltan campos obligatorios</p>
+                    <button onclick="finishOrder()" class="w-full bg-[var(--accent)] text-white py-5 rounded-xl font-bold uppercase mt-10 hover:opacity-95 shadow-xl transition-all text-black text-black text-black text-black text-black">FINALIZAR COMPRA →</button>
+                    <p id="validation-error" class="text-[9px] text-red-500 font-bold text-center mt-4 hidden uppercase tracking-widest text-black text-black text-black text-black text-black">Faltan campos obligatorios</p>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- MODAL ÉXITO -->
-    <div id="success-modal" class="flex-col items-center justify-center text-center p-10 text-black">
-        <div class="w-24 h-24 bg-[var(--accent)] rounded-full flex items-center justify-center text-white mb-8 shadow-xl animate__animated animate__zoomIn text-black"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-        <h2 class="font-serif text-5xl italic mb-4 text-black">¡Pedido Recibido!</h2>
-        <p class="text-base opacity-70 italic mb-10 max-w-sm mx-auto text-black">Gracias por comprar en Allin, nos comunicaremos contigo enseguida.</p>
-        <button onclick="resetApp()" class="text-[11px] font-bold uppercase border-b border-black/20 pb-1 hover:text-[var(--pitaya)] transition-all text-black">Volver al inicio</button>
+    <div id="success-modal" class="flex-col items-center justify-center text-center p-10 text-black text-black text-black text-black text-black text-black">
+        <div class="w-24 h-24 bg-[var(--accent)] rounded-full flex items-center justify-center text-white mb-8 shadow-xl animate__animated animate__zoomIn text-black text-black text-black text-black text-black text-black text-black"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+        <h2 class="font-serif text-5xl italic mb-4 text-black text-black text-black text-black text-black text-black text-black">¡Pedido Recibido!</h2>
+        <p class="text-base opacity-70 italic mb-10 max-w-sm mx-auto text-black text-black text-black text-black text-black text-black text-black">Gracias por comprar en Allin, nos comunicaremos contigo enseguida.</p>
+        <button onclick="resetApp()" class="text-[11px] font-bold uppercase border-b border-black/20 pb-1 hover:text-[var(--pitaya)] transition-all text-black text-black text-black text-black text-black text-black text-black">Volver al inicio</button>
     </div>
 
     <!-- PERSONALIZACIÓN MODAL -->
-    <div id="custom-panel" class="side-panel text-black">
-        <div class="flex justify-between items-start mb-8 text-black">
-            <h2 id="custom-product-name" class="font-serif text-3xl italic tracking-tighter text-black">Producto</h2>
-            <button onclick="closeAllPanels()" class="text-xl opacity-20 hover:opacity-100 text-black">✕</button>
+    <div id="custom-panel" class="side-panel text-black text-black text-black text-black text-black text-black text-black text-black">
+        <div class="flex justify-between items-start mb-8 text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black">
+            <h2 id="custom-product-name" class="font-serif text-3xl italic tracking-tighter text-black text-black text-black text-black text-black text-black text-black text-black">Producto</h2>
+            <button onclick="closeAllPanels()" class="text-xl opacity-20 hover:opacity-100 text-black text-black text-black text-black text-black text-black text-black text-black">✕</button>
         </div>
-        <div class="flex-grow overflow-y-auto no-scrollbar text-black">
-            <div id="base-ingredients-box" class="mb-8 p-4 bg-gray-50 rounded-2xl hidden text-black"><p id="base-ingredients-text" class="text-[10px] leading-relaxed opacity-60 italic text-black"></p></div>
-            <div id="dynamic-selectors" class="mb-10 text-black"></div>
-            <div id="fruit-selector-container" class="mb-10 hidden text-black">
-                <p class="text-[10px] font-bold uppercase opacity-40 mb-4 tracking-widest text-black">Selecciona tus frutas (3 incluidas, adicionales S/ 1.50 c/u)</p>
-                <div id="fruit-grid" class="space-y-2 text-black"></div>
+        <div class="flex-grow overflow-y-auto no-scrollbar text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black">
+            <div id="base-ingredients-box" class="mb-8 p-4 bg-gray-50 rounded-2xl hidden text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black"><p id="base-ingredients-text" class="text-[10px] leading-relaxed opacity-60 italic text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black"></p></div>
+            <div id="dynamic-selectors" class="mb-10 text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black"></div>
+            <div id="fruit-selector-container" class="mb-10 hidden text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black">
+                <p class="text-[10px] font-bold uppercase opacity-40 mb-4 tracking-widest text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black">Selecciona tus frutas (3 incluidas, adicionales S/ 1.50 c/u)</p>
+                <div id="fruit-grid" class="space-y-2 text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black"></div>
             </div>
-            <p id="extras-title" class="text-[10px] font-bold uppercase opacity-40 mb-6 tracking-widest text-black">Extras</p>
-            <div id="toppings-container" class="flex flex-col text-black"></div>
+            <p id="extras-title" class="text-[10px] font-bold uppercase opacity-40 mb-6 tracking-widest text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black">Extras</p>
+            <div id="toppings-container" class="flex flex-col text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black"></div>
         </div>
-        <div class="pt-8 border-t border-black/5 text-black">
-            <div class="flex justify-between mb-4 px-1 text-black"><span class="text-[10px] font-bold uppercase opacity-30 tracking-widest text-black">Subtotal</span><span id="custom-total-price" class="font-serif text-2xl font-black italic text-black">S/ 0.00</span></div>
-            <button onclick="confirmAddToCart()" class="w-full bg-[var(--accent)] text-white py-5 rounded-3xl font-bold uppercase shadow-xl tracking-widest text-black">Añadir al Carrito</button>
+        <div class="pt-8 border-t border-black/5">
+            <div class="flex justify-between mb-4 px-1">
+                <span class="text-[10px] font-bold uppercase opacity-30 tracking-widest">Subtotal</span>
+                <span id="custom-total-price" class="font-serif text-2xl font-black italic">S/ 0.00</span>
+            </div>
+            <button onclick="confirmAddToCart()" class="w-full bg-[var(--accent)] text-white py-5 rounded-3xl font-bold uppercase shadow-xl tracking-widest">Añadir al Carrito</button>
         </div>
     </div>
 
     <!-- CARRITO SIDE PANEL -->
-    <div id="cart-panel" class="side-panel text-black">
-        <div class="h-full flex flex-col text-black">
-            <div class="flex justify-between items-start mb-8 text-black"><h2 class="font-serif text-3xl italic tracking-tighter text-black">Carrito</h2><button onclick="closeAllPanels()" class="text-xl opacity-20 hover:opacity-100 text-black">✕</button></div>
-            <div id="cart-items-list" class="flex-grow flex flex-col overflow-y-auto text-black"></div>
-            <div id="cart-footer" class="pt-8 border-t border-black/5 hidden text-black">
-                <div class="flex justify-between mb-6 px-1 font-bold uppercase text-xs tracking-widest text-black"><span>Total</span><span id="cart-grand-total">S/ 0.00</span></div>
-                <button onclick="goToCheckout()" class="w-full bg-[var(--accent)] text-white py-5 rounded-3xl font-bold uppercase tracking-widest shadow-xl text-black">Continuar</button>
+    <div id="cart-panel" class="side-panel text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black">
+        <div class="h-full flex flex-col text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black">
+            <div class="flex justify-between items-start mb-8 text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black"><h2 class="font-serif text-3xl italic tracking-tighter text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black">Carrito</h2><button onclick="closeAllPanels()" class="text-xl opacity-20 hover:opacity-100 text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black">✕</button></div>
+            <div id="cart-items-list" class="flex-grow flex flex-col overflow-y-auto text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black"></div>
+            <div id="cart-footer" class="pt-8 border-t border-black/5 hidden text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black">
+                <div class="flex justify-between mb-6 px-1 font-bold uppercase text-xs tracking-widest text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black"><span>Total</span><span id="cart-grand-total">S/ 0.00</span></div>
+                <button onclick="goToCheckout()" class="w-full bg-[var(--accent)] text-white py-5 rounded-3xl font-bold uppercase tracking-widest shadow-xl text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black text-black">Continuar</button>
             </div>
         </div>
     </div>
@@ -607,10 +618,36 @@
         const toppingOptions = {
             smoothie: [{ name: 'Proteína Vegetal', price: 5 }, { name: 'Chía Orgánica', price: 2 }, { name: 'Chocolate 70%', price: 4 }, { name: 'Colágeno', price: 4 }, { name: 'Mix Frutos Rojos', price: 5 }],
             refresco: [{ name: 'Chía Orgánica', price: 2 }, { name: 'Electrolitos', price: 3 }],
-            helado: [{ name: 'Pistacho Gourmet', price: 3 }, { name: 'Granola', price: 2 }, { name: 'Chocolate 70%', price: 4 }],
-            parfait: [{ name: 'Avena', price: 2 }, { name: 'Miel', price: 1.5 }, { name: 'Granola', price: 2 }, { name: 'Pistacho', price: 3 }, { name: 'Chía', price: 2 }],
-            postres: [{ name: 'Mantequilla Almendra', price: 3 }, { name: 'Sal de Maras', price: 1 }],
-            sandwich: [{ name: 'Huevo extra', price: 3 }, { name: 'Palta extra', price: 4 }, { name: 'Queso extra', price: 3 }]
+            helado: [
+                { name: 'Fresa', price: 1.50, section: 'Frutas' },
+                { name: 'Plátano', price: 1.50, section: 'Frutas' },
+                { name: 'Mango', price: 1.50, section: 'Frutas' },
+                { name: 'Aguaymanto', price: 1.50, section: 'Frutas' },
+                { name: 'Granola', price: 2.50, section: 'Crunch' },
+                { name: 'Avena', price: 2.00, section: 'Crunch' },
+                { name: 'Pistachos', price: 3.00, section: 'Crunch' },
+                { name: 'Almendras', price: 2.50, section: 'Crunch' },
+                { name: 'Miel', price: 1.00, section: 'Dulzor natural' },
+                { name: 'Sirope de agave', price: 1.50, section: 'Dulzor natural' },
+                { name: 'Cacao 70%', price: 2.50, section: 'Premium' },
+                { name: 'Coco rallado', price: 1.50, section: 'Premium' },
+                { name: 'Semillas de chía', price: 1.00, section: 'Extras funcionales' },
+                { name: 'Semillas de linaza', price: 1.00, section: 'Extras funcionales' }
+            ],
+            postres: [
+                { name: 'Fresa', price: 1.50, section: 'Frutas frescas' },
+                { name: 'Plátano', price: 1.50, section: 'Frutas frescas' },
+                { name: 'Mango', price: 1.50, section: 'Frutas frescas' },
+                { name: 'Frambuesa', price: 1.50, section: 'Frutas frescas' },
+                { name: 'Arándano', price: 1.50, section: 'Frutas frescas' },
+                { name: 'Granola', price: 2.00, section: 'Crunch' },
+                { name: 'Frutos secos', price: 2.50, section: 'Crunch' },
+                { name: 'Miel', price: 1.00, section: 'Dulzor' },
+                { name: 'Jarabe de agave', price: 1.50, section: 'Dulzor' },
+                { name: 'Cacao 70%', price: 2.50, section: 'Extras' },
+                { name: 'Mantequilla de maní', price: 2.00, section: 'Extras' }
+            ],
+            sandwich: [{ name: 'Palta extra', price: 4 }, { name: 'Queso fresco', price: 3 }, { name: 'Queso bajo en grasa', price: 3 }]
         };
 
         const parfaitFruits = ["Fresa", "Plátano", "Arándano", "Kiwi", "Pitahaya", "Mango", "Piña", "Papaya", "Mandarina", "Naranja", "Uva", "Granadilla", "Tuna"];
@@ -627,6 +664,12 @@
 
         let cart = []; let currentProductName = ''; let currentImg = ''; let basePrice = 0; let currentCategory = ''; let selectedToppings = new Set(); let selectedFruits = new Set(); let currentSizePrice = 0; let currentSizeName = ''; let currentTemp = 'Sin calentar';
 
+        let selectedBread = '';
+        let selectedProteins = new Set();
+        let selectedVegs = new Set();
+        let selectedSauces = new Set();
+        let selectedSweetnessLevel = 'Medio';
+
         function openOverlay() { document.getElementById('overlay').classList.remove('hidden'); setTimeout(() => document.getElementById('overlay').classList.add('opacity-100'), 10); }
         function closeAllPanels() { document.querySelectorAll('.side-panel').forEach(p => p.classList.remove('active')); const overlay = document.getElementById('overlay'); overlay.classList.remove('opacity-100'); setTimeout(() => { overlay.classList.add('hidden'); }, 300); }
         function openRewards() { openOverlay(); document.getElementById('rewards-panel').classList.add('active'); }
@@ -634,7 +677,11 @@
         function openCart() { renderCart(); openOverlay(); document.getElementById('cart-panel').classList.add('active'); }
 
         function openCustomizer(name, category, price, img) { 
-            currentProductName = name; currentImg = img; basePrice = price; currentCategory = category; selectedToppings.clear(); selectedFruits.clear();
+            currentProductName = name; currentImg = img; basePrice = price; currentCategory = category; 
+            selectedToppings.clear(); selectedFruits.clear();
+            selectedBread = 'Pan integral'; selectedProteins.clear(); selectedVegs.clear(); selectedSauces.clear();
+            selectedSweetnessLevel = 'Medio';
+
             const baseBox = document.getElementById('base-ingredients-box');
             const baseText = document.getElementById('base-ingredients-text');
             if(smoothieBases[name]) { baseBox.classList.remove('hidden'); baseText.innerText = smoothieBases[name]; } else { baseBox.classList.add('hidden'); }
@@ -654,6 +701,35 @@
 
         function toggleFruit(fruit, el) { if (selectedFruits.has(fruit)) { selectedFruits.delete(fruit); el.classList.remove('selected'); } else { selectedFruits.add(fruit); el.classList.add('selected'); } updatePriceDisplay(); }
 
+        function toggleSandwichOption(type, value, el) {
+            if (type === 'bread') {
+                selectedBread = value;
+                document.querySelectorAll('.bread-tile').forEach(t => t.classList.remove('selected'));
+                el.classList.add('selected');
+            } else if (type === 'protein') {
+                const maxProteins = currentProductName === 'Sandwich Taypa' ? 2 : 1;
+                if(selectedProteins.has(value)) {
+                    selectedProteins.delete(value);
+                    el.classList.remove('selected');
+                } else {
+                    if (selectedProteins.size < maxProteins) {
+                        selectedProteins.add(value);
+                        el.classList.add('selected');
+                    }
+                }
+            } else if (type === 'veg') {
+                if(selectedVegs.has(value)) { selectedVegs.delete(value); el.classList.remove('selected'); }
+                else { selectedVegs.add(value); el.classList.add('selected'); }
+            } else if (type === 'sauce') {
+                if(selectedSauces.has(value)) { selectedSauces.delete(value); el.classList.remove('selected'); }
+                else { selectedSauces.add(value); el.classList.add('selected'); }
+            } else if (type === 'sweetness') {
+                selectedSweetnessLevel = value;
+                document.querySelectorAll('.sweet-tile').forEach(t => t.classList.remove('selected'));
+                el.classList.add('selected');
+            }
+        }
+
         function renderDynamicSelectors(category) {
             const container = document.getElementById('dynamic-selectors');
             if (category === 'smoothie' || category === 'refresco') {
@@ -663,7 +739,7 @@
                 const s3 = '555 ml';
                 
                 container.innerHTML = `<p class="text-[10px] font-bold uppercase opacity-40 mb-6 tracking-widest text-black">Tamaño</p>
-                <div class="flex gap-2">
+                <div class="flex gap-2 text-black">
                     <div class="size-option selected text-black" onclick="selectSize('chico', 0, '${s1}', this)">
                         <div class="size-icon-container scale-s text-black">${cupSvg}</div>
                         <span class="size-name text-black">Chico</span>
@@ -685,48 +761,227 @@
                 currentSizePrice = 0; currentSizeName = 'Chico (' + s1 + ')';
             } else if (category === 'helado') {
                 container.innerHTML = `<p class="text-[10px] font-bold uppercase opacity-40 mb-6 tracking-widest text-black">Recipiente</p>
-                <div class="flex gap-2">
+                <div class="flex gap-2 text-black">
                     <div class="size-option selected text-black" onclick="selectSize('mediano', 0, '180 ml', this)"><div class="size-icon-container bowl-m text-black">${iceCreamSvg}</div><span class="size-name text-black">Mediano</span></div>
                     <div class="size-option text-black" onclick="selectSize('grande', 4.5, '300 ml', this)"><div class="size-icon-container bowl-l text-black">${iceCreamSvg}</div><span class="size-name text-black">Grande</span><span class="size-price-tag text-black">+ S/ 4.50</span></div>
                 </div>`;
                 currentSizePrice = 0; currentSizeName = 'Mediano (180ml)';
             } else if (category === 'postres') {
-                container.innerHTML = `<p class="text-[10px] font-bold uppercase opacity-40 mb-6 text-black">Preferencia</p><div class="flex gap-4"><div class="option-tile selected text-black" onclick="selectTemp('Sin calentar', this)"><span>Sin calentar</span></div><div class="option-tile text-black" onclick="selectTemp('Caliente', this)"><span>Caliente</span></div></div>`;
-                currentSizePrice = 0; currentTemp = 'Sin calentar';
+                container.innerHTML = `
+                    <p class="sandwich-step-label">Nivel de Dulzor</p>
+                    <div class="flex gap-2 mb-6">
+                        <div class="option-tile sweet-tile" onclick="toggleSandwichOption('sweetness', 'Bajo', this)"><span>Bajo</span></div>
+                        <div class="option-tile sweet-tile selected" onclick="toggleSandwichOption('sweetness', 'Medio', this)"><span>Medio</span></div>
+                        <div class="option-tile sweet-tile" onclick="toggleSandwichOption('sweetness', 'Alto', this)"><span>Alto</span></div>
+                    </div>`;
+                currentSizePrice = 0;
             } else if (category === 'sandwich') {
-                container.innerHTML = `<p class="text-[10px] font-bold uppercase opacity-40 mb-6 text-black">Preferencia</p><div class="flex gap-4"><div class="option-tile selected" onclick="selectTemp('Frío', this)"><span>Frío</span></div><div class="option-tile text-black" onclick="selectTemp('Calentado', this)"><span>Calentado</span></div></div>`;
-                currentSizePrice = 0; currentTemp = 'Frío';
+                let proteins = [];
+                let note = "(Escoge 1)";
+                if (currentProductName === 'Sandwich Full Fibra') {
+                    proteins = ['Pollo', 'Huevo', 'Palta', 'Carne de garbanzo', 'Burger de lenteja', 'Burger de quinoa'];
+                } else if (currentProductName === 'Sandwich Apaltado') {
+                    proteins = ['Pollo', 'Pavo', 'Huevo', 'Palta', 'Atún'];
+                } else if (currentProductName === 'Sandwich Taypa') {
+                    proteins = ['Pollo', 'Pavo', 'Huevo', 'Tofu', 'Palta', 'Carne de garbanzo', 'Burger de lenteja', 'Burger de quinoa', 'Atún', 'Carne de res'];
+                    note = "(Escoge hasta 2)";
+                } else if (currentProductName === 'Sandwich Clásico') {
+                    proteins = ['Pollo', 'Pavo', 'Huevo'];
+                }
+
+                container.innerHTML = `
+                    <p class="sandwich-step-label">Tipo de Pan</p>
+                    <div class="flex gap-2 mb-4">
+                        <div class="option-tile bread-tile selected" onclick="toggleSandwichOption('bread', 'Pan integral', this)"><span>Integral</span></div>
+                        <div class="option-tile bread-tile" onclick="toggleSandwichOption('bread', 'Pan multicereal', this)"><span>Multicereal</span></div>
+                        <div class="option-tile bread-tile" onclick="toggleSandwichOption('bread', 'Pan sin gluten', this)"><span>Sin Gluten</span></div>
+                    </div>
+                    <p class="sandwich-step-label">Proteína <span class="text-[8px] opacity-60">${note}</span></p>
+                    <div class="grid grid-cols-2 gap-2 mb-4">
+                        ${proteins.map(p => `<div class="option-tile" onclick="toggleSandwichOption('protein', '${p}', this)"><span>${p}</span></div>`).join('')}
+                    </div>
+                    <p class="sandwich-step-label">Vegetales</p>
+                    <div class="grid grid-cols-2 gap-2 mb-4">
+                        <div class="option-tile" onclick="toggleSandwichOption('veg', 'Tomate', this)"><span>Tomate</span></div>
+                        <div class="option-tile" onclick="toggleSandwichOption('veg', 'Espinaca', this)"><span>Espinaca</span></div>
+                        <div class="option-tile" onclick="toggleSandwichOption('veg', 'Pepino', this)"><span>Pepino</span></div>
+                        <div class="option-tile" onclick="toggleSandwichOption('veg', 'Mix hojas verdes', this)"><span>Mix hojas verdes</span></div>
+                    </div>
+                    <p class="sandwich-step-label">Salsas Saludables</p>
+                    <div class="grid grid-cols-2 gap-2">
+                        <div class="option-tile" onclick="toggleSandwichOption('sauce', 'Yogurt griego', this)"><span>Yogurt griego</span></div>
+                        <div class="option-tile" onclick="toggleSandwichOption('sauce', 'Salsa de palta', this)"><span>Salsa palta</span></div>
+                        <div class="option-tile" onclick="toggleSandwichOption('sauce', 'Mostaza natural', this)"><span>Mostaza natural</span></div>
+                        <div class="option-tile" onclick="toggleSandwichOption('sauce', 'Miel mostaza', this)"><span>Miel mostaza</span></div>
+                    </div>
+                `;
+                currentSizePrice = 0;
             } else { container.innerHTML = ''; }
         }
 
-        function selectSize(id, supplement, ml, el) { document.querySelectorAll('.size-option').forEach(opt => opt.classList.remove('selected')); el.classList.add('selected'); currentSizePrice = supplement; currentSizeName = id.charAt(0).toUpperCase() + id.slice(1) + ' (' + ml + ')'; updatePriceDisplay(); }
-        function selectTemp(temp, el) { document.querySelectorAll('.option-tile').forEach(opt => opt.classList.remove('selected')); el.classList.add('selected'); currentTemp = temp; }
-
         function renderToppings(category) { 
-            const container = document.getElementById('toppings-container'); const title = document.getElementById('extras-title');
+            const container = document.getElementById('toppings-container'); 
+            const title = document.getElementById('extras-title');
             if(!container || !title) return; container.innerHTML = ''; 
-            if(!toppingOptions[category]) { title.style.display = 'none'; return; } title.style.display = 'block';
-            toppingOptions[category].forEach(top => { 
-                const div = document.createElement('div'); div.className = 'topping-item text-black'; 
-                div.onclick = () => { div.classList.toggle('selected'); if(selectedToppings.has(top.name)) selectedToppings.delete(top.name); else selectedToppings.add(top.name); updatePriceDisplay(); }; 
-                div.innerHTML = `<div><span class="font-bold text-[11px] uppercase">${top.name}</span></div><span class="font-bold text-[10px]">+ S/ ${top.price.toFixed(2)}</span>`; 
-                container.appendChild(div); 
-            }); 
+            if(!toppingOptions[category]) { title.style.display = 'none'; return; } 
+            title.style.display = 'block';
+            
+            if(category === 'helado' || (category === 'postres' && currentProductName.includes('Waffle'))) {
+                title.style.display = 'none'; 
+                let sections = (category === 'helado') ? ['Frutas', 'Crunch', 'Dulzor natural', 'Premium', 'Extras funcionales'] : ['Frutas frescas', 'Crunch', 'Dulzor', 'Extras'];
+                const currentData = toppingOptions[category];
+
+                sections.forEach(secName => {
+                    const secLabel = document.createElement('p');
+                    secLabel.className = 'sandwich-step-label';
+                    secLabel.innerText = secName;
+                    container.appendChild(secLabel);
+                    
+                    const filtered = currentData.filter(t => t.section === secName);
+                    filtered.forEach(top => {
+                        const div = document.createElement('div');
+                        div.className = 'topping-item text-black';
+                        div.onclick = () => { 
+                            div.classList.toggle('selected'); 
+                            if(selectedToppings.has(top.name)) selectedToppings.delete(top.name); 
+                            else selectedToppings.add(top.name); 
+                            updatePriceDisplay(); 
+                        };
+                        div.innerHTML = `<div><span class="font-bold text-[11px] uppercase">${top.name}</span></div><span class="font-bold text-[10px]">+ S/ ${top.price.toFixed(2)}</span>`;
+                        container.appendChild(div);
+                    });
+
+                    if (secName === 'Dulzor' && category === 'postres') {
+                        const sweetWrapper = document.createElement('div');
+                        sweetWrapper.innerHTML = `
+                            <p class="sandwich-step-label">Nivel de Dulzor</p>
+                            <div class="flex gap-2 mb-6 text-black">
+                                <div class="option-tile sweet-tile ${selectedSweetnessLevel === 'Bajo' ? 'selected' : ''}" onclick="toggleSandwichOption('sweetness', 'Bajo', this)"><span>Bajo</span></div>
+                                <div class="option-tile sweet-tile ${selectedSweetnessLevel === 'Medio' ? 'selected' : ''}" onclick="toggleSandwichOption('sweetness', 'Medio', this)"><span>Medio</span></div>
+                                <div class="option-tile sweet-tile ${selectedSweetnessLevel === 'Alto' ? 'selected' : ''}" onclick="toggleSandwichOption('sweetness', 'Alto', this)"><span>Alto</span></div>
+                            </div>
+                        `;
+                        container.appendChild(sweetWrapper);
+                    }
+                });
+            } else if (category === 'postres') {
+                title.style.display = 'none';
+                const sections = ['Crunch', 'Dulzor', 'Extras'];
+                sections.forEach(secName => {
+                    const secLabel = document.createElement('p');
+                    secLabel.className = 'sandwich-step-label';
+                    secLabel.innerText = secName;
+                    container.appendChild(secLabel);
+                    const filtered = toppingOptions.postres.filter(t => t.section === secName);
+                    filtered.forEach(top => {
+                        const div = document.createElement('div');
+                        div.className = 'topping-item text-black';
+                        div.onclick = () => { 
+                            div.classList.toggle('selected'); 
+                            if(selectedToppings.has(top.name)) selectedToppings.delete(top.name); 
+                            else selectedToppings.add(top.name); 
+                            updatePriceDisplay(); 
+                        };
+                        div.innerHTML = `<div><span class="font-bold text-[11px] uppercase">${top.name}</span></div><span class="font-bold text-[10px]">+ S/ ${top.price.toFixed(2)}</span>`;
+                        container.appendChild(div);
+                    });
+
+                    if (secName === 'Dulzor') {
+                        const sweetWrapper = document.createElement('div');
+                        sweetWrapper.innerHTML = `
+                            <p class="sandwich-step-label text-black">Nivel de Dulzor</p>
+                            <div class="flex gap-2 mb-6">
+                                <div class="option-tile sweet-tile ${selectedSweetnessLevel === 'Bajo' ? 'selected' : ''}" onclick="toggleSandwichOption('sweetness', 'Bajo', this)"><span>Bajo</span></div>
+                                <div class="option-tile sweet-tile ${selectedSweetnessLevel === 'Medio' ? 'selected' : ''}" onclick="toggleSandwichOption('sweetness', 'Medio', this)"><span>Medio</span></div>
+                                <div class="option-tile sweet-tile ${selectedSweetnessLevel === 'Alto' ? 'selected' : ''}" onclick="toggleSandwichOption('sweetness', 'Alto', this)"><span>Alto</span></div>
+                            </div>
+                        `;
+                        container.appendChild(sweetWrapper);
+                    }
+                });
+            } else if (category === 'sandwich') {
+                title.innerText = 'EXTRAS (GRASAS SALUDABLES)';
+                const currentSandwichProteins = (currentProductName === 'Sandwich Full Fibra') ? ['Pollo', 'Huevo', 'Palta', 'Carne de garbanzo', 'Burger de lenteja', 'Burger de quinoa'] : 
+                                               (currentProductName === 'Sandwich Apaltado') ? ['Pollo', 'Pavo', 'Huevo', 'Palta', 'Atún'] :
+                                               (currentProductName === 'Sandwich Taypa') ? ['Pollo', 'Pavo', 'Huevo', 'Tofu', 'Palta', 'Carne de garbanzo', 'Burger de lenteja', 'Burger de quinoa', 'Atún', 'Carne de res'] :
+                                               (currentProductName === 'Sandwich Clásico') ? ['Pollo', 'Pavo', 'Huevo'] : [];
+                
+                const allPotentialProteins = ['Pollo', 'Pavo', 'Huevo', 'Tofu', 'Palta', 'Carne de garbanzo', 'Burger de lenteja', 'Burger de quinoa', 'Atún', 'Carne de res'];
+                const removedProteins = allPotentialProteins.filter(p => !currentSandwichProteins.includes(p));
+
+                let sandwichExtras = [...toppingOptions.sandwich];
+                removedProteins.forEach(p => { sandwichExtras.push({ name: p, price: 3.50 }); });
+
+                sandwichExtras.forEach(top => { 
+                    const div = document.createElement('div'); div.className = 'topping-item text-black'; 
+                    div.onclick = () => { div.classList.toggle('selected'); if(selectedToppings.has(top.name)) selectedToppings.delete(top.name); else selectedToppings.add(top.name); updatePriceDisplay(); }; 
+                    div.innerHTML = `<div><span class="font-bold text-[11px] uppercase text-black">${top.name}</span></div><span class="font-bold text-[10px]">+ S/ ${top.price.toFixed(2)}</span>`; 
+                    container.appendChild(div); 
+                });
+            } else {
+                toppingOptions[category].forEach(top => { 
+                    const div = document.createElement('div'); div.className = 'topping-item text-black'; 
+                    div.onclick = () => { div.classList.toggle('selected'); if(selectedToppings.has(top.name)) selectedToppings.delete(top.name); else selectedToppings.add(top.name); updatePriceDisplay(); }; 
+                    div.innerHTML = `<div><span class="font-bold text-[11px] uppercase">${top.name}</span></div><span class="font-bold text-[10px]">+ S/ ${top.price.toFixed(2)}</span>`; 
+                    container.appendChild(div); 
+                });
+            }
         }
 
         function updatePriceDisplay() { 
-            let tTotal = 0; if(toppingOptions[currentCategory]) toppingOptions[currentCategory].forEach(t => { if(selectedToppings.has(t.name)) tTotal += t.price; });
+            let tTotal = 0; 
+            const currentSandwichProteins = (currentProductName === 'Sandwich Full Fibra') ? ['Pollo', 'Huevo', 'Palta', 'Carne de garbanzo', 'Burger de lenteja', 'Burger de quinoa'] : 
+                                           (currentProductName === 'Sandwich Apaltado') ? ['Pollo', 'Pavo', 'Huevo', 'Palta', 'Atún'] :
+                                           (currentProductName === 'Sandwich Taypa') ? ['Pollo', 'Pavo', 'Huevo', 'Tofu', 'Palta', 'Carne de garbanzo', 'Burger de lenteja', 'Burger de quinoa', 'Atún', 'Carne de res'] :
+                                           (currentProductName === 'Sandwich Clásico') ? ['Pollo', 'Pavo', 'Huevo'] : [];
+            
+            const allPotentialProteins = ['Pollo', 'Pavo', 'Huevo', 'Tofu', 'Palta', 'Carne de garbanzo', 'Burger de lenteja', 'Burger de quinoa', 'Atún', 'Carne de res'];
+            const removedProteins = allPotentialProteins.filter(p => !currentSandwichProteins.includes(p));
+
+            let currentExtras = [...(toppingOptions[currentCategory] || [])];
+            if (currentCategory === 'sandwich') { removedProteins.forEach(p => currentExtras.push({ name: p, price: 3.50 })); }
+
+            currentExtras.forEach(t => { if(selectedToppings.has(t.name)) tTotal += t.price; });
             let fruitExtra = (currentCategory === 'parfait' && currentProductName === 'Parfait de Frutas Personalizable' && selectedFruits.size > 3) ? (selectedFruits.size - 3) * 1.5 : 0;
             const total = basePrice + currentSizePrice + tTotal + fruitExtra; 
             document.getElementById('custom-total-price').innerText = `S/ ${total.toFixed(2)}`; 
         }
 
         function confirmAddToCart() { 
-            let tTotal = 0; if(toppingOptions[currentCategory]) toppingOptions[currentCategory].forEach(t => { if(selectedToppings.has(t.name)) tTotal += t.price; });
+            let tTotal = 0; 
+            const currentSandwichProteins = (currentProductName === 'Sandwich Full Fibra') ? ['Pollo', 'Huevo', 'Palta', 'Carne de garbanzo', 'Burger de lenteja', 'Burger de quinoa'] : 
+                                           (currentProductName === 'Sandwich Apaltado') ? ['Pollo', 'Pavo', 'Huevo', 'Palta', 'Atún'] :
+                                           (currentProductName === 'Sandwich Taypa') ? ['Pollo', 'Pavo', 'Huevo', 'Tofu', 'Palta', 'Carne de garbanzo', 'Burger de lenteja', 'Burger de quinoa', 'Atún', 'Carne de res'] :
+                                           (currentProductName === 'Sandwich Clásico') ? ['Pollo', 'Pavo', 'Huevo'] : [];
+            
+            const allPotentialProteins = ['Pollo', 'Pavo', 'Huevo', 'Tofu', 'Palta', 'Carne de garbanzo', 'Burger de lenteja', 'Burger de quinoa', 'Atún', 'Carne de res'];
+            const removedProteins = allPotentialProteins.filter(p => !currentSandwichProteins.includes(p));
+
+            let currentExtrasList = [...(toppingOptions[currentCategory] || [])];
+            if (currentCategory === 'sandwich') { removedProteins.forEach(p => currentExtrasList.push({ name: p, price: 3.50 })); }
+
+            currentExtrasList.forEach(t => { if(selectedToppings.has(t.name)) tTotal += t.price; });
             let fruitExtra = (currentCategory === 'parfait' && currentProductName === 'Parfait de Frutas Personalizable' && selectedFruits.size > 3) ? (selectedFruits.size - 3) * 1.5 : 0;
             const finalPrice = basePrice + currentSizePrice + tTotal + fruitExtra;
-            let opt = (currentCategory === 'postres' || currentCategory === 'sandwich') ? currentTemp : currentSizeName;
-            if (currentCategory === 'parfait') { opt = (currentProductName === 'Parfait de Frutas Personalizable') ? (selectedFruits.size > 0 ? Array.from(selectedFruits).join(", ") : "Base yogurt") : "Clásico"; }
+            
+            let opt = '';
+            const toppingsArr = Array.from(selectedToppings).join(', ');
+
+            if (currentCategory === 'sandwich') {
+                const prots = Array.from(selectedProteins).join(', ');
+                const vegs = Array.from(selectedVegs).join(', ');
+                const sauces = Array.from(selectedSauces).join(', ');
+                opt = `${selectedBread} | Prots: ${prots || '-'} | Veg: ${vegs || '-'} | Salsas: ${sauces || '-'} ${toppingsArr ? '| Extras: ' + toppingsArr : ''}`;
+            } else if (currentCategory === 'postres') {
+                opt = `Dulzor: ${selectedSweetnessLevel} ${toppingsArr ? '| ' + toppingsArr : ''}`;
+            } else if (currentCategory === 'parfait') {
+                opt = (currentProductName === 'Parfait de Frutas Personalizable') ? (selectedFruits.size > 0 ? Array.from(selectedFruits).join(", ") : "Base yogurt") : "Clásico";
+            } else if (currentCategory === 'helado') {
+                opt = `${currentSizeName} ${toppingsArr ? '| ' + toppingsArr : ''}`;
+            } else {
+                opt = currentSizeName;
+            }
+
             cart.push({ id: Date.now(), name: currentProductName, option: opt, price: finalPrice, img: currentImg }); 
             document.getElementById('cart-count').innerText = cart.length; closeAllPanels(); 
         }
@@ -737,9 +992,9 @@
             document.getElementById('cart-footer').classList.remove('hidden'); list.innerHTML = ''; let gTotal = 0;
             cart.forEach(item => { 
                 gTotal += item.price; 
-                const div = document.createElement('div'); div.className = 'flex gap-4 py-4 border-b border-black/5 items-center text-black'; 
-                const imgTag = item.img ? `<img src="${item.img}">` : `<div class="cart-img-placeholder text-black text-black text-black">ALLIN</div>`;
-                div.innerHTML = `<div class="cart-img-box text-black text-black">${imgTag}</div><div class="flex-grow text-black"><h4 class="font-serif text-sm font-bold text-black text-black">${item.name}</h4><span class="text-[9px] uppercase font-bold opacity-30 text-black text-black">${item.option}</span></div><div class="text-right text-black text-black text-black text-black text-black"><span class="font-bold text-xs block text-black text-black">S/ ${item.price.toFixed(2)}</span><button onclick="removeItem(${item.id})" class="text-[8px] font-bold text-red-400 mt-2 uppercase text-black text-black">Quitar</button></div>`; 
+                const div = document.createElement('div'); div.className = 'flex gap-4 py-4 border-b border-black/5 items-center text-black text-black'; 
+                const imgTag = item.img ? `<img src="${item.img}">` : `<div class="cart-img-placeholder text-black">ALLIN</div>`;
+                div.innerHTML = `<div class="cart-img-box text-black">${imgTag}</div><div class="flex-grow text-black text-black"><h4 class="font-serif text-sm font-bold text-black text-black">${item.name}</h4><span class="text-[9px] uppercase font-bold opacity-30 text-black text-black leading-tight block mt-1">${item.option}</span></div><div class="text-right text-black text-black"><span class="font-bold text-xs block text-black text-black">S/ ${item.price.toFixed(2)}</span><button onclick="removeItem(${item.id})" class="text-[8px] font-bold text-red-400 mt-2 uppercase text-black text-black">Quitar</button></div>`; 
                 list.appendChild(div); 
             });
             totalEl.innerText = `S/ ${gTotal.toFixed(2)}`;
@@ -752,9 +1007,9 @@
         function renderCheckoutSummary() {
             const list = document.getElementById('checkout-items-list'); const totalEl = document.getElementById('chk-total');
             list.innerHTML = ''; let gTotal = 0;
-            cart.forEach(item => { gTotal += item.price; const imgTag = item.img ? `<img src="${item.img}">` : `<div class="cart-img-placeholder text-black text-black">ALLIN</div>`;
+            cart.forEach(item => { gTotal += item.price; const imgTag = item.img ? `<img src="${item.img}">` : `<div class="cart-img-placeholder text-black">ALLIN</div>`;
                 const div = document.createElement('div'); div.className = 'flex gap-4 items-center mb-6 text-black'; 
-                div.innerHTML = `<div class="cart-img-box text-black text-black">${imgTag}</div><div class="flex-grow text-black"><h4 class="font-serif text-sm font-bold text-black text-black">${item.name}</h4><p class="text-[9px] text-gray-400 mt-1 uppercase text-black text-black">${item.option}</p><span class="font-bold text-xs text-black text-black">S/ ${item.price.toFixed(2)}</span></div>`; 
+                div.innerHTML = `<div class="cart-img-box text-black text-black">${imgTag}</div><div class="flex-grow text-black text-black"><h4 class="font-serif text-sm font-bold text-black text-black">${item.name}</h4><p class="text-[9px] text-gray-400 mt-1 uppercase text-black text-black leading-tight">${item.option}</p><span class="font-bold text-xs text-black text-black">S/ ${item.price.toFixed(2)}</span></div>`; 
                 list.appendChild(div); 
             });
             totalEl.innerText = `S/ ${gTotal.toFixed(2)}`;
